@@ -1,0 +1,7 @@
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\bin\Debug\AutoStore.Logic.dll
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\bin\Debug\AutoStore.Logic.pdb
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\obj\Debug\AutoStore.Logic.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\obj\Debug\AutoStore.Logic.dll
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\obj\Debug\AutoStore.Logic.pdb
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\bin\Debug\Oracle.DataAccess.dll
+C:\Users\HP\source\repos\AutoStore\AutoStore.Logic\obj\Debug\AutoStore.Logic.csproj.CopyComplete
