@@ -40,7 +40,7 @@ namespace AutoStore
             // 
             // prBar
             // 
-            this.prBar.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("prBar.AnimationFunction")));
+            this.prBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.prBar.AnimationSpeed = 500;
             this.prBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.prBar.Font = new System.Drawing.Font("Lucida Console", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

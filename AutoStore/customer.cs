@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using AutoStore.Logic;
 using System.Text.RegularExpressions;
+using Oracle.ManagedDataAccess.Client;
+using Dapper;
 
 namespace AutoStore
 {
@@ -35,54 +37,61 @@ namespace AutoStore
 
         private void savebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("insert into customer values('" + idText.Text + "','" +
-                cstmrText.Text + "','" + cityText.Text + "','" + noText.Text + "','" +
-                addressText.Text + "')", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New Customer Added successfully");
-            clearText();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("insert into customer values('" + idText.Text + "','" +cstmrText.Text + "','" + cityText.Text + "','" + noText.Text + "','" +addressText.Text + "')");
+                MessageBox.Show("New Customer Added successfully");
+                clearText();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void updatebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("update customer set cstmr_name = '" + cstmrText.Text + "', cstmr_city = '" + cityText.Text + "', cstmr_address = '" + addressText.Text + "', cstmr_no = '" + noText.Text + "' where cstmr_id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Customer Updated successfully");
-            clearText();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("update customer set cstmr_name = '" + cstmrText.Text + "', cstmr_city = '" + cityText.Text + "', cstmr_address = '" + addressText.Text + "', cstmr_no = '" + noText.Text + "' where cstmr_id = '" + idText.Text + "'");
+                MessageBox.Show("Customer Updated successfully");
+                clearText();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void deletebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("delete from customer where cstmr_id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Customer Deleted Successfully");
-            clearText();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("delete from customer where cstmr_id = '" + idText.Text + "'");
+                MessageBox.Show("Customer Deleted Successfully");
+                clearText();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
-        private void showdata(DataGridView customergv, DataGridViewColumn cid, DataGridViewColumn cname, DataGridViewColumn caddress, DataGridViewColumn cno,DataGridViewColumn ccity)
+        private void showdata(DataGridView customergv)
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select * from customer", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            cid.DataPropertyName = dt.Columns["cstmr_id"].ToString();
-            cname.DataPropertyName = dt.Columns["cstmr_name"].ToString();
-            caddress.DataPropertyName = dt.Columns["cstmr_address"].ToString();
-            ccity.DataPropertyName = dt.Columns["cstmr_city"].ToString();
-            cno.DataPropertyName = dt.Columns["cstmr_no"].ToString();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var custmr = ORCL.Query<custView>("select cstmr_id as ID, cstmr_name as Name, cstmr_address as Address,cstmr_city as City, cstmr_no as Phone  from customer").ToList();
 
-            customergv.DataSource = dt;
-            pr.conn.Close();
-            Main1.disable(panel1);
+                customergv.AutoGenerateColumns = true;
+                customergv.DataSource = null;
+                customergv.DataSource = custmr;
+
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         //---------------------------Generate ID----------------
@@ -91,10 +100,13 @@ namespace AutoStore
         int customerID;
         private int getCustomerID()
         {
-            OleDbCommand command = new OleDbCommand("SELECT CSTMR_ID FROM (SELECT c.CSTMR_ID FROM Customer c ORDER BY c.CSTMR_ID DESC) WHERE ROWNUM = 1", pr.conn);
-            pr.conn.Open();
-            customerID = Convert.ToInt32(command.ExecuteScalar());
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                customerID = ORCL.Query<int>("SELECT CSTMR_ID FROM (SELECT c.CSTMR_ID FROM Customer c ORDER BY c.CSTMR_ID DESC) WHERE ROWNUM = 1").FirstOrDefault();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
             return customerID;
         }
 
@@ -128,12 +140,16 @@ namespace AutoStore
 
         private void search()
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select * from customer WHERE CSTMR_NAME LIKE '%" + searchText.Text.ToLower() + "%'", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            customergv.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var custmr = ORCL.Query<custView>("select cstmr_id as ID, cstmr_name as Name, cstmr_address as Address,cstmr_city as City, cstmr_no as Phone from customer WHERE CSTMR_NAME LIKE '%" + searchText.Text.ToLower() + "%'").ToList();
+                customergv.AutoGenerateColumns = true;
+                customergv.DataSource = null;
+                customergv.DataSource = custmr;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void customergv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -145,11 +161,11 @@ namespace AutoStore
                 circularButton2.Enabled = true;
                 circularButton3.Enabled = true;
                 customergv.CurrentCell.Selected = true;
-                idText.Text = customergv.Rows[e.RowIndex].Cells["cid"].FormattedValue.ToString();
-                cstmrText.Text = customergv.Rows[e.RowIndex].Cells["cname"].FormattedValue.ToString();
-                cityText.Text = customergv.Rows[e.RowIndex].Cells["ccity"].FormattedValue.ToString();
-                addressText.Text = customergv.Rows[e.RowIndex].Cells["caddress"].FormattedValue.ToString();
-                noText.Text = customergv.Rows[e.RowIndex].Cells["cno"].FormattedValue.ToString();
+                idText.Text = customergv.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+                cstmrText.Text = customergv.Rows[e.RowIndex].Cells["Name"].FormattedValue.ToString();
+                cityText.Text = customergv.Rows[e.RowIndex].Cells["City"].FormattedValue.ToString();
+                addressText.Text = customergv.Rows[e.RowIndex].Cells["Address"].FormattedValue.ToString();
+                noText.Text = customergv.Rows[e.RowIndex].Cells["Phone"].FormattedValue.ToString();
             }
         }
 
@@ -173,24 +189,24 @@ namespace AutoStore
         private void circularButton3_Click(object sender, EventArgs e)
         {
             updatebtn();
-            showdata(customergv, cid, cname, caddress, cno, ccity);
+            showdata(customergv);
         }
 
         private void circularButton1_Click(object sender, EventArgs e)
         {
             savebtn();
-            showdata(customergv, cid, cname, caddress, cno, ccity);
+            showdata(customergv);
         }
 
         private void circularButton2_Click(object sender, EventArgs e)
         {
             deletebtn();
-            showdata(customergv, cid, cname, caddress, cno, ccity);
+            showdata(customergv);
         }
 
         private void circularButton5_Click(object sender, EventArgs e)
         {
-            showdata(customergv,cid,cname,caddress,cno,ccity);
+            showdata(customergv);
             searchText.Focus();
             clearText();
             customergv.AllowUserToAddRows = false;
@@ -216,5 +232,14 @@ namespace AutoStore
         {
             Main1.alphabetCheck(cstmrText);
         }
+    }
+
+    public class custView
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
     }
 }

@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Data.OracleClient;
+using Oracle.ManagedDataAccess.Client;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
 
 namespace AutoStore
 {
@@ -54,33 +55,40 @@ namespace AutoStore
 
         public void findAccount()
         {
-            string uname = emailText.Text;
-            bool Email = IsValidEmail(uname);
-            if(Email)
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                string name =emailText.Text.Trim();
-               // OracleString or = new OracleString(name); 
-                string userName;
-                string Password;
-                string query = "select USR_usrNAME from users where USR_EMAIL = '" + name+"' ";
-                OleDbCommand cmd = new OleDbCommand(query, pr.conn);
-                pr.conn.Open();
-                userName = cmd.ExecuteScalar().ToString();
-                cmd.CommandText = "select USR_PASSWORD from users where USR_EMAIL = '" + name + "' ";
-                Password = cmd.ExecuteScalar().ToString();
-                pr.conn.Close();
-                if (userName != "")
+                string uname = emailText.Text;
+                bool Email = IsValidEmail(uname);
+                if (Email)
                 {
-                    nameText.Text = userName;
-                    pwdText.Text = Password;
+                    string name = emailText.Text.Trim();
+                    string userName = string.Empty;
+                    string Password = string.Empty;
+                    string query = "select USR_usrNAME as name, USR_PASSWORD as pass from users where USR_EMAIL = '" + name + "' ";
+                    var detail = ORCL.Query<dynamic>(query).FirstOrDefault();
+                    if (detail != null)
+                    {
+                        userName = detail.name;
+                        Password = detail.pass;
+
+                        if (userName != "")
+                        {
+                            nameText.Text = userName;
+                            pwdText.Text = Password;
+                        }
+                        emailText.Text = "";
+                    }
                 }
-                emailText.Text = "";
+                else
+                {
+                    MessageBox.Show("Enter Valid Email Address", "Error");
+                    emailText.Text = "";
+                }
             }
-            else
-            {
-                MessageBox.Show("Enter Valid Email Address", "Error");
-                emailText.Text = "";
-            }
+            catch { }
+            finally { ORCL.Dispose(); }
+            
         }
 
         private void bunifuLabel2_Click(object sender, EventArgs e)

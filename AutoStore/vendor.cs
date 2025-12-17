@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using AutoStore.Logic;
+using Oracle.ManagedDataAccess.Client;
+using Dapper;
 
 namespace AutoStore
 {
@@ -24,35 +26,45 @@ namespace AutoStore
 
         private void savebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("insert into vendors values('" + idText.Text + "','" + nameText.Text.ToLower() + "','" + address.Text + "','" + noText.Text + "','" + personText.Text + "')", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("New vendor added successfully");
-            textBox();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("insert into vendors values('" + idText.Text + "','" + nameText.Text.ToLower() + "','" + address.Text + "','" + noText.Text + "','" + personText.Text + "')");
+                MessageBox.Show("New vendor added successfully");
+                textBox();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
+            
         }
 
         private void updatebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("update vendors set company = '" + nameText.Text + "', address = '" + address.Text + "', contactperson = '" + personText.Text + "', cellno = '" + noText.Text + "' where id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Vendor Data Updated successfully");
-            textBox();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("update vendors set company = '" + nameText.Text + "', address = '" + address.Text + "', contactperson = '" + personText.Text + "', cellno = '" + noText.Text + "' where id = '" + idText.Text + "'");
+                MessageBox.Show("Vendor Data Updated successfully");
+                textBox();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void deletebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("delete from vendors where id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Vendor Deleted successfully");
-            textBox();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("DELETE from vendors where id = '" + idText.Text + "'");
+                MessageBox.Show("Vendor Deleted successfully");
+                textBox();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void textBox()
@@ -66,23 +78,31 @@ namespace AutoStore
 
         private void show()
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select * from vendors", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            vendorGV.DataSource = dt;
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var vendr = ORCL.Query<vendorView>("select ID, Company, Address, CONTACTPERSON as Name, CELLNO as Phone from vendors").ToList();
+                vendorGV.AutoGenerateColumns = true;
+                vendorGV.DataSource = null;
+                vendorGV.DataSource = vendr;
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void search()
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select * from vendors WHERE COMPANY LIKE '%" + searchText.Text.ToLower() + "%'", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            vendorGV.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var vendr = ORCL.Query<vendorView>("select ID, Company, Address, CONTACTPERSON as Name, CELLNO as Phone from vendors WHERE COMPANY LIKE '%" + searchText.Text.ToLower() + "%'").ToList();
+                vendorGV.AutoGenerateColumns = true;
+                vendorGV.DataSource = null;
+                vendorGV.DataSource = vendr;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         //---------------------------Generate ID----------------
@@ -91,10 +111,13 @@ namespace AutoStore
         int vendorID;
         private int getVendorID()
         {
-            OleDbCommand command = new OleDbCommand("SELECT ID FROM (SELECT v.ID FROM Vendors v ORDER BY v.ID DESC) WHERE ROWNUM = 1", pr.conn);
-            pr.conn.Open();
-            vendorID = Convert.ToInt32(command.ExecuteScalar());
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                vendorID = ORCL.Query<int>("SELECT ID FROM (SELECT v.ID FROM Vendors v ORDER BY v.ID DESC) WHERE ROWNUM = 1").FirstOrDefault();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
             return vendorID;
         }
 
@@ -170,10 +193,10 @@ namespace AutoStore
                 saveButton.Enabled = false;
                 vendorGV.CurrentCell.Selected = true;
                 idText.Text = vendorGV.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
-                nameText.Text = vendorGV.Rows[e.RowIndex].Cells["COMPANY"].FormattedValue.ToString();
-                address.Text = vendorGV.Rows[e.RowIndex].Cells["ADDRESS"].FormattedValue.ToString();
-                personText.Text = vendorGV.Rows[e.RowIndex].Cells["CONTACTPERSON"].FormattedValue.ToString();
-                noText.Text = vendorGV.Rows[e.RowIndex].Cells["CELLNO"].FormattedValue.ToString();
+                nameText.Text = vendorGV.Rows[e.RowIndex].Cells["Company"].FormattedValue.ToString();
+                address.Text = vendorGV.Rows[e.RowIndex].Cells["Address"].FormattedValue.ToString();
+                personText.Text = vendorGV.Rows[e.RowIndex].Cells["Name"].FormattedValue.ToString();
+                noText.Text = vendorGV.Rows[e.RowIndex].Cells["Phone"].FormattedValue.ToString();
             }
         }
 
@@ -197,5 +220,14 @@ namespace AutoStore
         {
             Main1.authenticateNo(noText);
         }
+    }
+
+    public class vendorView
+    {
+        public int ID { get; set; }
+        public string Company { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
     }
 }

@@ -27,15 +27,15 @@ namespace AutoStore
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
             CustomerReport customerReport = new CustomerReport();
-            this.Close();
-            customerReport.Show();
+            //this.Close();
+            customerReport.ShowDialog();
         }
 
         private void bunifuButton2_Click(object sender, EventArgs e)
         {
             VendorReport vendorReport = new VendorReport();
-            this.Close();
-            vendorReport.Show();
+            //this.Close();
+            vendorReport.ShowDialog();
         }
     }
 }

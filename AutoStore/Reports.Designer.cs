@@ -146,7 +146,6 @@ namespace AutoStore
             stateProperties1.ForeColor = System.Drawing.Color.White;
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.bunifuButton3.onHoverState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.BorderRadius = 3;
             stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -155,7 +154,6 @@ namespace AutoStore
             stateProperties2.ForeColor = System.Drawing.Color.White;
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
-            this.bunifuButton3.OnPressedState = stateProperties2;
             this.bunifuButton3.Size = new System.Drawing.Size(210, 45);
             this.bunifuButton3.TabIndex = 3;
             this.bunifuButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,7 +207,6 @@ namespace AutoStore
             stateProperties3.ForeColor = System.Drawing.Color.White;
             stateProperties3.IconLeftImage = null;
             stateProperties3.IconRightImage = null;
-            this.bunifuButton2.onHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties4.BorderRadius = 3;
             stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -218,7 +215,6 @@ namespace AutoStore
             stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.IconLeftImage = null;
             stateProperties4.IconRightImage = null;
-            this.bunifuButton2.OnPressedState = stateProperties4;
             this.bunifuButton2.Size = new System.Drawing.Size(210, 45);
             this.bunifuButton2.TabIndex = 2;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -273,7 +269,6 @@ namespace AutoStore
             stateProperties5.ForeColor = System.Drawing.Color.White;
             stateProperties5.IconLeftImage = null;
             stateProperties5.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties6.BorderRadius = 3;
             stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -282,7 +277,6 @@ namespace AutoStore
             stateProperties6.ForeColor = System.Drawing.Color.White;
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties6;
             this.bunifuButton1.Size = new System.Drawing.Size(210, 45);
             this.bunifuButton1.TabIndex = 1;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

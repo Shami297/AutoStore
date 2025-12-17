@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dapper;
+using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Linq;
@@ -9,25 +11,17 @@ namespace AutoStore.Logic
 {
     public class purchaseDetailManager
     {
-        Connection pr = new Connection();
         public List<purchaseDetails> GetPurchaseDetails(object monthPicker, object yearPiker)
         {
             List<purchaseDetails> purchaseDetails = new List<purchaseDetails>();
-            string query = @"SELECT pu.id ,v.company||' '||pu.pi_date from purchaseinvoice pu 
-            inner join vendors v  on v.id = pu.vendors_id 
-            where EXTRACT(month FROM pu.pi_date)= " + monthPicker + " and EXTRACT(year FROM pu.pi_date) = " + yearPiker + "";
-            pr.conn.Open();
-            OleDbCommand command = new OleDbCommand(query, pr.conn);
-            OleDbDataReader odr = command.ExecuteReader();
-
-            while (odr.Read())
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                purchaseDetails purchase = new purchaseDetails();
-                purchase.ID = Convert.ToInt32(odr.GetValue(0).ToString()); //odr.GetInt32(0);
-                purchase.Name = odr.GetString(1);
-                purchaseDetails.Add(purchase);
+                string query = @"SELECT pu.id as ID ,v.company||' '||pu.pi_date as Name from purchaseinvoice pu inner join vendors v  on v.id = pu.vendors_id where EXTRACT(month FROM pu.pi_date)= " + monthPicker + " and EXTRACT(year FROM pu.pi_date) = " + yearPiker + "";
+                purchaseDetails = ORCL.Query<purchaseDetails>(query).ToList();
             }
-            pr.conn.Close();
+            catch { }
+            finally { ORCL.Dispose(); }
             return purchaseDetails;
         }
     }

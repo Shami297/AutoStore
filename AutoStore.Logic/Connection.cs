@@ -1,4 +1,5 @@
 ﻿
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
@@ -10,7 +11,14 @@ namespace AutoStore.Logic
 {
     public class Connection
     {
-        public OleDbConnection conn = new OleDbConnection("Provider=MSDAORA;Data Source=ORCL;Persist Security Info=True;User ID=HR;Password=HR;Unicode=True;MultipleActiveResultSets=true");
-        //public OracleConnection con = new OracleConnection("Provider=MSDAORA;Data Source=ORCL;Persist Security Info=True;User ID=HR;Password=HR;Unicode=True;MultipleActiveResultSets=true");
+        private static readonly string _connString =
+           "User Id=HR;Password=sys123;Data Source=localhost:1521/XE;";
+
+        public static OracleConnection GetConnection()
+        {
+            var con = new OracleConnection(_connString);
+            con.Open(); 
+            return con;
+        }
     }
 }

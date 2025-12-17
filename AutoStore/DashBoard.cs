@@ -282,7 +282,7 @@ namespace AutoStore
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            this.Close();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)

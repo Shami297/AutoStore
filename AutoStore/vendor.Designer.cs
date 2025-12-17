@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vendor));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            this.searchText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            this.searchText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.vendorGV = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.address = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.address = new Bunifu.UI.WinForms.BunifuTextBox();
             this.updateButton = new AutoStore.CircularButton();
             this.deleteButton = new AutoStore.CircularButton();
             this.saveButton = new AutoStore.CircularButton();
@@ -61,8 +61,8 @@
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.personText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.idText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.personText = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.idText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.circularButton5 = new AutoStore.CircularButton();
             this.circularButton4 = new AutoStore.CircularButton();
             this.nameText = new System.Windows.Forms.TextBox();
@@ -135,7 +135,7 @@
             this.searchText.SelectionStart = 0;
             this.searchText.ShortcutsEnabled = true;
             this.searchText.Size = new System.Drawing.Size(230, 35);
-            this.searchText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.searchText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.searchText.TabIndex = 55;
             this.searchText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.searchText.TextMarginBottom = 0;
@@ -322,7 +322,7 @@
             this.address.SelectionStart = 0;
             this.address.ShortcutsEnabled = true;
             this.address.Size = new System.Drawing.Size(200, 35);
-            this.address.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.address.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.address.TabIndex = 2;
             this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.address.TextMarginBottom = 0;
@@ -495,7 +495,7 @@
             this.personText.SelectionStart = 0;
             this.personText.ShortcutsEnabled = true;
             this.personText.Size = new System.Drawing.Size(200, 35);
-            this.personText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.personText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.personText.TabIndex = 3;
             this.personText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.personText.TextMarginBottom = 0;
@@ -570,7 +570,7 @@
             this.idText.SelectionStart = 0;
             this.idText.ShortcutsEnabled = true;
             this.idText.Size = new System.Drawing.Size(200, 35);
-            this.idText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.idText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.idText.TabIndex = 0;
             this.idText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.idText.TextMarginBottom = 0;
@@ -648,12 +648,12 @@
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox searchText;
+        private Bunifu.UI.WinForms.BunifuTextBox searchText;
         private Bunifu.UI.WinForms.BunifuDataGridView vendorGV;
         private CircularButton circularButton4;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox address;
+        private Bunifu.UI.WinForms.BunifuTextBox address;
         private CircularButton updateButton;
         private CircularButton deleteButton;
         private CircularButton saveButton;
@@ -661,8 +661,8 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox personText;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox idText;
+        private Bunifu.UI.WinForms.BunifuTextBox personText;
+        private Bunifu.UI.WinForms.BunifuTextBox idText;
         private CircularButton circularButton5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox nameText;

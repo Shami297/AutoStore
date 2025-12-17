@@ -159,7 +159,6 @@
             stateProperties1.ForeColor = System.Drawing.Color.White;
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.BorderRadius = 3;
             stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -168,7 +167,6 @@
             stateProperties2.ForeColor = System.Drawing.Color.White;
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties2;
             this.bunifuButton1.Size = new System.Drawing.Size(210, 45);
             this.bunifuButton1.TabIndex = 5;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

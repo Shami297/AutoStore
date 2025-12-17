@@ -9,55 +9,50 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using AutoStore.Logic;
+using Oracle.ManagedDataAccess.Client;
+using Dapper;
 
 namespace AutoStore
 {
     public partial class categories : UserControl
     {
-        Connection pr = new Connection();
+        
         private void savebtn()
         {
+            OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                pr.conn.Open();
-                /*OleDbCommand cmd = new OleDbCommand("insert into categories values('" + bunifuTextBox3.Text + "','" + bunifuTextBox1.Text + "','" +
-                    comboBox1.Text + "')", conn);*/
-                OleDbCommand cmd = new OleDbCommand("insert into categories values('" + idText.Text + "','" + catNameText.Text + "','" +
-                comboBox1.Text + "')", pr.conn);
-                cmd.ExecuteNonQuery();
+                ORCL.Execute("insert into categories values('" + idText.Text + "','" + catNameText.Text + "','" +comboBox1.Text + "')");
                 MessageBox.Show("Data inserted successfully");
                 clearText();
-                pr.conn.Close();
                 Main1.disable(panel1);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+            finally { ORCL.Dispose(); }
 
         }
 
-        private void show1(DataGridView categoryGV, DataGridViewColumn catid, DataGridViewColumn name, DataGridViewColumn status)
+        private void show1(DataGridView categoryGV)
         {
+            OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                pr.conn.Open();
-                OleDbDataAdapter oda = new OleDbDataAdapter("select * from categories", pr.conn);
-                DataTable dt = new DataTable();
-                oda.Fill(dt);
-                catid.DataPropertyName = dt.Columns["cat_id"].ToString();
-                name.DataPropertyName = dt.Columns["cat_name"].ToString();
-                status.DataPropertyName = dt.Columns["cat_isActive"].ToString();
+                var categories = ORCL.Query<catView>("select cat_id as ID,cat_name as Name, cat_isActive as Active from categories").ToList();
 
-                categoryGV.DataSource = dt;
-                pr.conn.Close();
+                categoryGV.AutoGenerateColumns = true;
+                categoryGV.DataSource = null;
+                categoryGV.DataSource = categories;
                 Main1.disable(panel1);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            
+            finally { ORCL.Dispose(); }
+
         }
 
         private void clearText()
@@ -67,48 +62,66 @@ namespace AutoStore
             comboBox1.Text = "Select....";
         }
 
-        private void auto()
-        {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select isnull(max(cat_id),0) from categories", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            pr.conn.Close();
-        }
+        //private void auto()
+        //{
+        //    OracleConnection ORCL = Connection.GetConnection();
+        //    try
+        //    {
+
+        //    }
+        //    catch { }
+        //    finally { ORCL.Dispose(); }
+        //    pr.conn.Open();
+        //    OleDbDataAdapter oda = new OleDbDataAdapter("select isnull(max(cat_id),0) from categories", pr.conn);
+        //    DataTable dt = new DataTable();
+        //    oda.Fill(dt);
+        //    pr.conn.Close();
+        //}
 
         private void updatebtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("update categories set cat_name = '" + catNameText.Text + "', cat_isActive = '" + comboBox1.Text + "' where cat_id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Data Updated successfully");
-            clearText();
-            pr.conn.Close();
-            show1(categoryGV, catid, name, status);
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("update categories set cat_name = '" + catNameText.Text + "', cat_isActive = '" + comboBox1.Text + "' where cat_id = '" + idText.Text + "'");
+
+                MessageBox.Show("Data Updated successfully");
+                clearText();
+                show1(categoryGV);
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void delbtn()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("delete from categories where cat_id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Data deleted successfully");
-            clearText();
-            pr.conn.Close();
-            show1(categoryGV, catid, name, status);
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("DELETE from categories where cat_id = '" + idText.Text + "'");
+                MessageBox.Show("Data deleted successfully");
+                clearText();
+                show1(categoryGV);
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
 
         private void search()
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select * from categories WHERE CAT_NAME LIKE '%" + searchText.Text.ToLower() + "%'", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            categoryGV.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var categories = ORCL.Query<catView>("select cat_id as ID,cat_name as Name, cat_isActive as Active from categories WHERE CAT_NAME LIKE '%" + searchText.Text.ToLower() + "%'").ToList();
+                categoryGV.AutoGenerateColumns = true;
+                categoryGV.DataSource = null;
+                categoryGV.DataSource = categories;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         //---------------------------Generate ID----------------
@@ -117,10 +130,13 @@ namespace AutoStore
         int categoryID;
         private int getCategoryID()
         {
-            OleDbCommand command = new OleDbCommand("SELECT CAT_ID FROM (SELECT c.CAT_ID FROM Categories c ORDER BY c.CAT_ID DESC) WHERE ROWNUM = 1", pr.conn);
-            pr.conn.Open();
-            categoryID = Convert.ToInt32(command.ExecuteScalar());
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                categoryID = ORCL.Query<int>("SELECT CAT_ID FROM (SELECT c.CAT_ID FROM Categories c ORDER BY c.CAT_ID DESC) WHERE ROWNUM = 1").FirstOrDefault();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
             return categoryID;
         }
 
@@ -172,7 +188,7 @@ namespace AutoStore
 
         private void circularButton1_Click(object sender, EventArgs e)
         {
-            show1(categoryGV, catid, name, status);
+            show1(categoryGV);
             clearText();
             searchText.Focus();
             categoryGV.AllowUserToAddRows = false;
@@ -197,9 +213,9 @@ namespace AutoStore
                 circularButton4.Enabled = true;
                 updateButton.Enabled = true;
                 categoryGV.CurrentCell.Selected = true;
-                idText.Text = categoryGV.Rows[e.RowIndex].Cells["catid"].FormattedValue.ToString();
-                catNameText.Text = categoryGV.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
-                comboBox1.Text = categoryGV.Rows[e.RowIndex].Cells["status"].FormattedValue.ToString();
+                idText.Text = categoryGV.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString();
+                catNameText.Text = categoryGV.Rows[e.RowIndex].Cells["Name"].FormattedValue.ToString();
+                comboBox1.Text = categoryGV.Rows[e.RowIndex].Cells["Active"].FormattedValue.ToString();
             }
 
         }
@@ -214,5 +230,12 @@ namespace AutoStore
             Main1.disable(panel1);
             clearText();
         }
+    }
+
+    public class catView
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Active { get; set; }
     }
 }

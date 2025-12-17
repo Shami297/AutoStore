@@ -1,4 +1,6 @@
 ﻿using AutoStore.Logic;
+using Dapper;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,13 +41,14 @@ namespace AutoStore
         private void showDetail()
         {
             int vendrID = (int)selectVendr.SelectedValue;
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter(@"SELECT to_char(pi.PI_DATE,'DD-MM-YYYY')  AS InvoiceDATE, SUM(p.total) AS Total from purchaseinvoice pi, purchases p ,vendors v where v.id = " + vendrID + " and  pi.VENDORS_ID = " + vendrID + "  and pi.ID = p.PURINVOICE_ID GROUP BY pi.PI_DATE order  by pi.PI_DATE", pr.conn);
-
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            vendrReport.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var vendr = ORCL.Query<vReportView>("SELECT to_char(pi.PI_DATE,'DD-MM-YYYY')  AS InvoiceDATE, SUM(p.total) AS Total from purchaseinvoice pi, purchases p ,vendors v where v.id = " + vendrID + " and  pi.VENDORS_ID = " + vendrID + "  and pi.ID = p.PURINVOICE_ID GROUP BY pi.PI_DATE order  by pi.PI_DATE").ToList();
+                vendrReport.DataSource = vendr;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
 
 
         }
@@ -70,10 +73,16 @@ namespace AutoStore
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            Reports reports = new Reports();
-            reports.Show();
+            //Reports reports = new Reports();
+            //reports.Show();
             this.Close();
         }
 
+    }
+
+    public class vReportView
+    {
+        public string InvoiceDATE { get; set; }
+        public string Total { get; set; }
     }
 }

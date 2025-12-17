@@ -1,4 +1,6 @@
 ﻿using AutoStore.Logic;
+using Dapper;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +37,7 @@ namespace AutoStore
 
         private void purchaseInvoiceDetail_Load(object sender, EventArgs e)
         {
+            this.monthPicker.Value = DateTime.Now;
             loadInvoice();
         }
 
@@ -52,13 +55,14 @@ namespace AutoStore
         private void showPurchases()
         {
             int invoiceID = (int)selectText.SelectedValue;
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter(@"SELECT p.name, pu.quantity, pu.total from products p, 
-            purchaseinvoice pui, purchases pu where pui.id = "+ invoiceID + " and pu.PURINVOICE_ID = pui.ID and p.id = pu.product_id", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            InvoiceDetail.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var purchases = ORCL.Query<pInvoiceDetailView>("SELECT p.name, pu.quantity, pu.total from purchaseinvoice pui LEFT JOIN purchases pu ON pu.PURINVOICE_ID = pui.ID LEFT JOIN products p ON p.id = pu.product_id where pui.ID = "+ invoiceID);
+                InvoiceDetail.DataSource = purchases;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void select_TextChanged(object sender, EventArgs e)
@@ -78,10 +82,16 @@ namespace AutoStore
             grossTot = 0;
             foreach (DataGridViewRow row in InvoiceDetail.Rows)
             {
-                total = Convert.ToInt32(row.Cells["total"].Value.ToString());
+                total = Convert.ToInt32(row.Cells["Total"].Value.ToString());
                 grossTot = total + grossTot;
             }
             return grossTot;
         }
+    }
+    public class pInvoiceDetailView
+    {
+        public string Name { get; set; }
+        public string Quantity { get; set; }
+        public string Total { get; set; }
     }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using AutoStore.Logic;
+using Oracle.ManagedDataAccess.Client;
+using Dapper;
 
 namespace AutoStore
 {
@@ -17,23 +19,29 @@ namespace AutoStore
         Connection pr = new Connection();
         private void login()
         {
-            OleDbDataAdapter da= new OleDbDataAdapter("Select * from users Where usr_usrname ='" + userbox.Text.Trim()+"' and usr_password = '"+ pwdbox.Text.Trim()+ "'and USR_ISACTIVE = 'Yes'", pr.conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if(dt.Rows.Count == 1)
+
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                DashBoard d = new DashBoard();
-                d.Show();
-                userbox.Text = "";
-                pwdbox.Text = "";
+                var user = ORCL.Query<dynamic>("Select * from users Where usr_usrname ='" + userbox.Text.Trim() + "' and usr_password = '" + pwdbox.Text.Trim() + "'and USR_ISACTIVE = 'Yes'").FirstOrDefault();
+
+                if (user != null)
+                {
+                    DashBoard d = new DashBoard();
+                    d.Show();
+                    userbox.Text = "";
+                    pwdbox.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter valid UserName or Password");
+                    userbox.Text = "";
+                    pwdbox.Text = "";
+                    userbox.Focus();
+                }
             }
-            else
-            {
-                MessageBox.Show("Please Enter valid UserName or Password");
-                userbox.Text = "";
-                pwdbox.Text = "";
-                userbox.Focus();
-            }
+            catch (Exception) { }
+            finally { ORCL.Dispose(); }
 
         }
         public Form1()

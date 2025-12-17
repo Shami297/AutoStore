@@ -29,41 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(categories));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.refresh = new System.Windows.Forms.Button();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.idText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.idText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.circularButton4 = new AutoStore.CircularButton();
             this.updateButton = new AutoStore.CircularButton();
             this.circularButton2 = new AutoStore.CircularButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.catNameText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.catNameText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.circularButton5 = new AutoStore.CircularButton();
             this.circularButton1 = new AutoStore.CircularButton();
-            this.searchText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.searchText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.categoryGV = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.catid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.refresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGV)).BeginInit();
@@ -89,8 +86,22 @@
             this.panel1.Size = new System.Drawing.Size(200, 576);
             this.panel1.TabIndex = 0;
             // 
+            // refresh
+            // 
+            this.refresh.FlatAppearance.BorderSize = 2;
+            this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.Location = new System.Drawing.Point(0, 0);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(21, 23);
+            this.refresh.TabIndex = 54;
+            this.refresh.Text = "X";
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
+            // 
             // bunifuLabel1
             // 
+            this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,7 +109,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(6, 88);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(98, 19);
+            this.bunifuLabel1.Size = new System.Drawing.Size(95, 17);
             this.bunifuLabel1.TabIndex = 56;
             this.bunifuLabel1.Text = "Category Name";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -111,6 +122,7 @@
             this.idText.AnimationSpeed = 200;
             this.idText.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.idText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.idText.AutoSizeHeight = true;
             this.idText.BackColor = System.Drawing.Color.Transparent;
             this.idText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("idText.BackgroundImage")));
             this.idText.BorderColorActive = System.Drawing.Color.DodgerBlue;
@@ -159,6 +171,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Black;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.idText.OnIdleState = stateProperties4;
+            this.idText.Padding = new System.Windows.Forms.Padding(3);
             this.idText.PasswordChar = '\0';
             this.idText.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.idText.PlaceholderText = "Category ID";
@@ -169,7 +182,7 @@
             this.idText.SelectionStart = 0;
             this.idText.ShortcutsEnabled = true;
             this.idText.Size = new System.Drawing.Size(194, 35);
-            this.idText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.idText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.idText.TabIndex = 0;
             this.idText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.idText.TextMarginBottom = 0;
@@ -181,6 +194,7 @@
             // 
             // bunifuLabel3
             // 
+            this.bunifuLabel3.AllowParentOverrides = false;
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,7 +202,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(6, 22);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(16, 19);
+            this.bunifuLabel3.Size = new System.Drawing.Size(13, 17);
             this.bunifuLabel3.TabIndex = 54;
             this.bunifuLabel3.Text = "ID";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -197,7 +211,7 @@
             // circularButton4
             // 
             this.circularButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.circularButton4.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton4.ForeColor = System.Drawing.Color.White;
             this.circularButton4.Location = new System.Drawing.Point(52, 337);
             this.circularButton4.Name = "circularButton4";
@@ -210,7 +224,7 @@
             // updateButton
             // 
             this.updateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.updateButton.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.Color.White;
             this.updateButton.Location = new System.Drawing.Point(96, 234);
             this.updateButton.Name = "updateButton";
@@ -223,7 +237,7 @@
             // circularButton2
             // 
             this.circularButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.circularButton2.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton2.ForeColor = System.Drawing.Color.White;
             this.circularButton2.Location = new System.Drawing.Point(6, 236);
             this.circularButton2.Name = "circularButton2";
@@ -249,6 +263,7 @@
             // 
             // bunifuLabel2
             // 
+            this.bunifuLabel2.AllowParentOverrides = false;
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,7 +271,7 @@
             this.bunifuLabel2.Location = new System.Drawing.Point(6, 154);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(54, 19);
+            this.bunifuLabel2.Size = new System.Drawing.Size(51, 17);
             this.bunifuLabel2.TabIndex = 2;
             this.bunifuLabel2.Text = "Is Active";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -269,6 +284,7 @@
             this.catNameText.AnimationSpeed = 200;
             this.catNameText.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.catNameText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.catNameText.AutoSizeHeight = true;
             this.catNameText.BackColor = System.Drawing.Color.Transparent;
             this.catNameText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("catNameText.BackgroundImage")));
             this.catNameText.BorderColorActive = System.Drawing.Color.DodgerBlue;
@@ -316,6 +332,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Black;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.catNameText.OnIdleState = stateProperties8;
+            this.catNameText.Padding = new System.Windows.Forms.Padding(3);
             this.catNameText.PasswordChar = '\0';
             this.catNameText.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.catNameText.PlaceholderText = "Enter Name";
@@ -326,7 +343,7 @@
             this.catNameText.SelectionStart = 0;
             this.catNameText.ShortcutsEnabled = true;
             this.catNameText.Size = new System.Drawing.Size(194, 35);
-            this.catNameText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.catNameText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.catNameText.TabIndex = 1;
             this.catNameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.catNameText.TextMarginBottom = 0;
@@ -353,7 +370,7 @@
             // circularButton5
             // 
             this.circularButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.circularButton5.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton5.ForeColor = System.Drawing.Color.Black;
             this.circularButton5.Location = new System.Drawing.Point(350, 59);
             this.circularButton5.Name = "circularButton5";
@@ -366,7 +383,7 @@
             // circularButton1
             // 
             this.circularButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.circularButton1.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton1.ForeColor = System.Drawing.Color.Black;
             this.circularButton1.Location = new System.Drawing.Point(444, 59);
             this.circularButton1.Name = "circularButton1";
@@ -383,6 +400,7 @@
             this.searchText.AnimationSpeed = 200;
             this.searchText.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.searchText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.searchText.AutoSizeHeight = true;
             this.searchText.BackColor = System.Drawing.Color.Transparent;
             this.searchText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchText.BackgroundImage")));
             this.searchText.BorderColorActive = System.Drawing.Color.DodgerBlue;
@@ -429,6 +447,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.searchText.OnIdleState = stateProperties12;
+            this.searchText.Padding = new System.Windows.Forms.Padding(3);
             this.searchText.PasswordChar = '\0';
             this.searchText.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.searchText.PlaceholderText = "Search....";
@@ -439,7 +458,7 @@
             this.searchText.SelectionStart = 0;
             this.searchText.ShortcutsEnabled = true;
             this.searchText.Size = new System.Drawing.Size(194, 35);
-            this.searchText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.searchText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.searchText.TabIndex = 52;
             this.searchText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.searchText.TextMarginBottom = 0;
@@ -465,15 +484,11 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.categoryGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.categoryGV.ColumnHeadersHeight = 40;
-            this.categoryGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.catid,
-            this.status});
             this.categoryGV.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.categoryGV.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.categoryGV.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -484,6 +499,8 @@
             this.categoryGV.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
             this.categoryGV.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             this.categoryGV.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.categoryGV.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.categoryGV.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.categoryGV.CurrentTheme.Name = null;
             this.categoryGV.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
             this.categoryGV.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -522,38 +539,6 @@
             this.categoryGV.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.categoryGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoryGV_CellContentClick);
             // 
-            // name
-            // 
-            this.name.HeaderText = "Category";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // catid
-            // 
-            this.catid.HeaderText = "ID";
-            this.catid.Name = "catid";
-            this.catid.ReadOnly = true;
-            this.catid.Visible = false;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // refresh
-            // 
-            this.refresh.FlatAppearance.BorderSize = 2;
-            this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refresh.Location = new System.Drawing.Point(0, 0);
-            this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(21, 23);
-            this.refresh.TabIndex = 54;
-            this.refresh.Text = "X";
-            this.refresh.UseVisualStyleBackColor = true;
-            this.refresh.Click += new System.EventHandler(this.refresh_Click);
-            // 
             // categories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,21 +562,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox catNameText;
+        private Bunifu.UI.WinForms.BunifuTextBox catNameText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private CircularButton circularButton2;
         private CircularButton circularButton4;
         private CircularButton updateButton;
         private CircularButton circularButton1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox searchText;
+        private Bunifu.UI.WinForms.BunifuTextBox searchText;
         private Bunifu.UI.WinForms.BunifuDataGridView categoryGV;
         private CircularButton circularButton5;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox idText;
+        private Bunifu.UI.WinForms.BunifuTextBox idText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn catid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.Button refresh;
     }
 }

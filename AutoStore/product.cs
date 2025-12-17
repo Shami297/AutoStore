@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using AutoStore.Logic;
+using Oracle.ManagedDataAccess.Client;
+using Dapper;
 
 namespace AutoStore
 {
@@ -24,40 +26,45 @@ namespace AutoStore
         private void insert()
         {
             int selectedCatgoryID = (int)category.SelectedValue;
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("insert into products values('" + idText.Text + "','" +
-                nameText.Text.ToLower() + "'," + selectedCatgoryID + ",'" +
-                bunifuTextBox5.Text + "')", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Product inserted successfully");
-            textBox();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("insert into products values('" + idText.Text + "','" +nameText.Text.ToLower() + "'," + selectedCatgoryID + ",'" +bunifuTextBox5.Text + "')");
+                MessageBox.Show("Product inserted successfully");
+                textBox();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void update()
         {
             int selectedCatgoryID = (int)category.SelectedValue;
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand(@"update products p set p.name = '" + 
-                nameText.Text.ToLower() + "', p.CATID = " + selectedCatgoryID + ", p.price = '" + 
-                bunifuTextBox5.Text + "' where p.id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Product Updated successfully");
-            textBox();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("UPDATE products p set p.name = '" +nameText.Text.ToLower() + "', p.CATID = " + selectedCatgoryID + ", p.price = '" +bunifuTextBox5.Text + "' where p.id = '" + idText.Text + "'");
+                MessageBox.Show("Product Updated successfully");
+                textBox();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void delete()
         {
-            pr.conn.Open();
-            OleDbCommand cmd = new OleDbCommand("delete from products where id = '" + idText.Text + "'", pr.conn);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Product deleted successfully");
-            textBox();
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("DELETE from products where id = '" + idText.Text + "'");
+                MessageBox.Show("Product deleted successfully");
+                textBox();
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void textBox()
@@ -70,15 +77,28 @@ namespace AutoStore
 
         private void show()
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter(@"select p.id, p.name, p.price, c.cat_name as category from
-            products p, categories c
-            where p.catid = c.cat_id", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            GV.DataSource = dt;
-            pr.conn.Close();
-            Main1.disable(panel1);
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var prod = ORCL.Query<ProductView>(
+                    @"select 
+                        p.id as ID, 
+                        p.name as Name, 
+                        p.price as Price, 
+                        c.cat_name as Category
+                      from products p
+                      join categories c on p.catid = c.cat_id"
+                ).ToList();
+
+                GV.AutoGenerateColumns = true;
+                GV.DataSource = null;
+                GV.DataSource = prod;
+
+                Main1.disable(panel1);
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
+            
         }
 
         /*private void show1(DataGridView GV, DataGridViewColumn id, DataGridViewColumn name, DataGridViewColumn category, DataGridViewColumn catid, DataGridViewColumn price)
@@ -112,12 +132,27 @@ namespace AutoStore
 
         private void search()
         {
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter("select * from PRODUCTS WHERE NAME LIKE '%" + searchText.Text.ToLower() + "%'", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            GV.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var namePro = searchText.Text.ToLower();
+                var prod = ORCL.Query<ProductView>(
+                    $@"select 
+                        p.id as ID, 
+                        p.name as Name, 
+                        p.price as Price, 
+                        c.cat_name as Category
+                      from products p
+                      join categories c on p.catid = c.cat_id
+                      WHERE NAME LIKE '%{namePro}%'"
+                ).ToList();
+
+                GV.AutoGenerateColumns = true;
+                GV.DataSource = null;
+                GV.DataSource = prod;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         //---------------------------Generate ID----------------
@@ -126,10 +161,13 @@ namespace AutoStore
         int productID;
         private int getProductID()
         {
-            OleDbCommand command = new OleDbCommand("SELECT ID FROM (SELECT p.ID FROM products p ORDER BY p.ID DESC) WHERE ROWNUM = 1", pr.conn);
-            pr.conn.Open();
-            productID = Convert.ToInt32(command.ExecuteScalar());
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                productID = ORCL.Query<int>("SELECT ID FROM (SELECT p.ID FROM products p ORDER BY p.ID DESC) WHERE ROWNUM = 1").FirstOrDefault();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
             return productID;
         }
 
@@ -237,5 +275,13 @@ namespace AutoStore
         {
             search();
         }
+    }
+
+    public class ProductView
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Category { get; set; }
     }
 }

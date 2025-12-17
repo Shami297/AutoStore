@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(saleInvoice));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,7 +48,7 @@
             this.insertInvoice = new System.Windows.Forms.Panel();
             this.customerText = new System.Windows.Forms.ComboBox();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.idText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.idText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.datePick = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -57,8 +57,8 @@
             this.totalLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.addToCart = new System.Windows.Forms.Button();
-            this.quantityText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.proPrice = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.quantityText = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.proPrice = new Bunifu.UI.WinForms.BunifuTextBox();
             this.productText = new System.Windows.Forms.ComboBox();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -206,7 +206,7 @@
             this.idText.SelectionStart = 0;
             this.idText.ShortcutsEnabled = true;
             this.idText.Size = new System.Drawing.Size(217, 35);
-            this.idText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.idText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.idText.TabIndex = 66;
             this.idText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.idText.TextMarginBottom = 0;
@@ -406,7 +406,7 @@
             this.quantityText.SelectionStart = 0;
             this.quantityText.ShortcutsEnabled = true;
             this.quantityText.Size = new System.Drawing.Size(215, 35);
-            this.quantityText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.quantityText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.quantityText.TabIndex = 88;
             this.quantityText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.quantityText.TextMarginBottom = 0;
@@ -482,7 +482,7 @@
             this.proPrice.SelectionStart = 0;
             this.proPrice.ShortcutsEnabled = true;
             this.proPrice.Size = new System.Drawing.Size(215, 35);
-            this.proPrice.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.proPrice.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.proPrice.TabIndex = 87;
             this.proPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.proPrice.TextMarginBottom = 0;
@@ -829,8 +829,8 @@
         private Bunifu.UI.WinForms.BunifuLabel totalLabel;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private System.Windows.Forms.Button addToCart;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox quantityText;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox proPrice;
+        private Bunifu.UI.WinForms.BunifuTextBox quantityText;
+        private Bunifu.UI.WinForms.BunifuTextBox proPrice;
         private System.Windows.Forms.ComboBox productText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
@@ -838,7 +838,7 @@
         private System.Windows.Forms.Panel insertInvoice;
         private System.Windows.Forms.ComboBox customerText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox idText;
+        private Bunifu.UI.WinForms.BunifuTextBox idText;
         private Bunifu.UI.WinForms.BunifuDatePicker datePick;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;

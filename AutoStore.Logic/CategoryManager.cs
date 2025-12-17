@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dapper;
+using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Linq;
@@ -12,20 +14,14 @@ namespace AutoStore.Logic
         public List<Category> GetCategories()
         {
             List<Category> categories = new List<Category>();
-            string query = "select CAT_ID, CAT_NAME from categories WHERE CAT_ISACTIVE = 'Yes'";
-            OleDbConnection connection = new OleDbConnection("Provider=MSDAORA;Data Source=ORCL;Persist Security Info=True;User ID=HR;Password=HR;Unicode=True");
-            connection.Open();
-            OleDbCommand command = new OleDbCommand(query, connection); 
-            OleDbDataReader odr = command.ExecuteReader();
-
-            while (odr.Read())
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                Category category = new Category();
-                category.ID = Convert.ToInt32(odr.GetValue(0).ToString()); //odr.GetInt32(0);
-                category.Name = odr.GetString(1);
-                categories.Add(category);
+                string query = "select CAT_ID as ID, CAT_NAME as NAME from categories WHERE CAT_ISACTIVE = 'Yes'";
+                categories = ORCL.Query<Category>(query).ToList();
             }
-            connection.Close();
+            catch { }
+            finally { ORCL.Dispose(); }
             return categories;
         }
     }

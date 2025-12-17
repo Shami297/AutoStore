@@ -1,4 +1,6 @@
 ﻿using AutoStore.Logic;
+using Dapper;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,19 +35,21 @@ namespace AutoStore
 
         private void SaleInvoiceDetail_Load(object sender, EventArgs e)
         {
+            this.datePick.Value = DateTime.Now;
             loadSaleInvoice();
         }
 
         private void showSales()
         {
             int saleID = (int)selectSaleInvoice.SelectedValue;
-            pr.conn.Open();
-            OleDbDataAdapter oda = new OleDbDataAdapter(@"SELECT p.name, s.quantity, s.total from products p, 
-            SALEINVOICE si, sales s where si.ID = " + saleID + " and s.SALINVOICE_ID = si.ID and p.id = s.product_id", pr.conn);
-            DataTable dt = new DataTable();
-            oda.Fill(dt);
-            saleGV.DataSource = dt;
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                var sales = ORCL.Query<sInvoiceDetailView>("SELECT p.name, s.quantity, s.total from SALEINVOICE si LEFT JOIN sales s ON s.SALINVOICE_ID = si.ID LEFT JOIN products p ON p.id = s.product_id where si.ID = "+ saleID);
+                saleGV.DataSource = sales;
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void selectSaleInvoice_TextChanged(object sender, EventArgs e)
@@ -85,10 +89,17 @@ namespace AutoStore
             grossTot = 0;
             foreach(DataGridViewRow row in saleGV.Rows)
             {
-                total = Convert.ToInt32(row.Cells["total"].Value.ToString());
+                total = Convert.ToInt32(row.Cells["Total"].Value.ToString());
                 grossTot = total + grossTot;
             }
             return grossTot;
         }
+    }
+
+    public class sInvoiceDetailView
+    {
+        public string Name { get; set; }
+        public string Quantity { get; set; }
+        public string Total { get; set; }
     }
 }

@@ -40,7 +40,7 @@ namespace AutoStore
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.datePick = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.datePick = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.viewBtn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.selectSaleInvoice = new System.Windows.Forms.ComboBox();
             this.sale = new System.Windows.Forms.FlowLayoutPanel();
@@ -121,13 +121,13 @@ namespace AutoStore
             this.datePick.BorderRadius = 0;
             this.datePick.ForeColor = System.Drawing.Color.White;
             this.datePick.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePick.FormatCustom = "MMMM - yyyy ";
+            this.datePick.CustomFormat = "MMMM - yyyy ";
             this.datePick.Location = new System.Drawing.Point(12, 93);
             this.datePick.Name = "datePick";
             this.datePick.Size = new System.Drawing.Size(182, 36);
             this.datePick.TabIndex = 3;
             this.datePick.Value = new System.DateTime(2022, 3, 9, 8, 4, 9, 532);
-            this.datePick.onValueChanged += new System.EventHandler(this.datePick_onValueChanged);
+            this.datePick.ValueChanged += new System.EventHandler(this.datePick_onValueChanged);
             // 
             // viewBtn
             // 
@@ -176,7 +176,6 @@ namespace AutoStore
             stateProperties1.ForeColor = System.Drawing.Color.White;
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.viewBtn.onHoverState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.BorderRadius = 2;
             stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -185,7 +184,6 @@ namespace AutoStore
             stateProperties2.ForeColor = System.Drawing.Color.White;
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
-            this.viewBtn.OnPressedState = stateProperties2;
             this.viewBtn.Size = new System.Drawing.Size(131, 39);
             this.viewBtn.TabIndex = 2;
             this.viewBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,7 +351,7 @@ namespace AutoStore
         private System.Windows.Forms.FlowLayoutPanel sale;
         private Bunifu.UI.WinForms.BunifuDataGridView saleGV;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton viewBtn;
-        private Bunifu.Framework.UI.BunifuDatepicker datePick;
+        private Bunifu.UI.WinForms.BunifuDatePicker datePick;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private System.Windows.Forms.Panel panel4;

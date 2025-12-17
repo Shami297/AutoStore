@@ -40,7 +40,7 @@ namespace AutoStore
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.selectText = new System.Windows.Forms.ComboBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.monthPicker = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.monthPicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -116,7 +116,6 @@ namespace AutoStore
             stateProperties1.ForeColor = System.Drawing.Color.White;
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties2.BorderRadius = 3;
             stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -125,7 +124,6 @@ namespace AutoStore
             stateProperties2.ForeColor = System.Drawing.Color.White;
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties2;
             this.bunifuButton1.Size = new System.Drawing.Size(131, 39);
             this.bunifuButton1.TabIndex = 1;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,13 +163,13 @@ namespace AutoStore
             this.monthPicker.BorderRadius = 0;
             this.monthPicker.ForeColor = System.Drawing.Color.White;
             this.monthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.monthPicker.FormatCustom = "MMMM - yyyy ";
+            this.monthPicker.CustomFormat = "MMMM - yyyy ";
             this.monthPicker.Location = new System.Drawing.Point(12, 96);
             this.monthPicker.Name = "monthPicker";
             this.monthPicker.Size = new System.Drawing.Size(182, 36);
             this.monthPicker.TabIndex = 0;
             this.monthPicker.Value = new System.DateTime(2022, 3, 9, 8, 4, 9, 532);
-            this.monthPicker.onValueChanged += new System.EventHandler(this.monthPicker_onValueChanged);
+            this.monthPicker.ValueChanged += new System.EventHandler(this.monthPicker_onValueChanged);
             // 
             // bunifuLabel1
             // 
@@ -343,7 +341,7 @@ namespace AutoStore
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private Bunifu.Framework.UI.BunifuDatepicker monthPicker;
+        private Bunifu.UI.WinForms.BunifuDatePicker monthPicker;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.ComboBox selectText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;

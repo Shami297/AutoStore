@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OracleClient;
+using Oracle.ManagedDataAccess.Client;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoStore.Logic;
 using System.Transactions;
+
+using Dapper;
+using System.Windows.Controls;
 
 namespace AutoStore
 {
@@ -107,55 +110,63 @@ namespace AutoStore
         int purchaceinvoiceid;
         private int insertpurchaseinvoice()
         {
+            OracleConnection ORCL = Connection.GetConnection();
             int vendorsID = (int)vendorText.SelectedValue;
-            OleDbCommand cmd = new OleDbCommand("insert into PURCHASEINVOICE values('" + idText.Text + "','" +
-              dateText.Text + "'," + vendorsID + ")", pr.conn);
-            pr.conn.Open();
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "SELECT id FROM (SELECT p.id FROM purchaseinvoice p ORDER BY p.id DESC) WHERE ROWNUM = 1";
-            purchaceinvoiceid = Convert.ToInt32(cmd.ExecuteScalar());
-            pr.conn.Close();
+            try
+            {
+                ORCL.Execute("INSERT INTO PURCHASEINVOICE VALUES ('" + idText.Text + "', '" +dateText.Text + "'," + vendorsID + ")");
+                purchaceinvoiceid = ORCL.Query<int>("SELECT id FROM (SELECT p.id FROM purchaseinvoice p ORDER BY p.id DESC) WHERE ROWNUM = 1").FirstOrDefault();
+            }
+            catch (Exception) { }
+            finally { ORCL.Dispose(); }
             return purchaceinvoiceid;
         }
         
         int coun = 0;
         private int insertpurchaseinvoicedetails()
         {
+            OracleConnection ORCL = Connection.GetConnection();
             int purID, proID, quantity, total;
-            purID = purchaceinvoiceid;
-            foreach (DataGridViewRow row in productGV.Rows)
+            try 
             {
-                proID = quantity = total = 0;
-                proID = Convert.ToInt32(row.Cells["idgv"].Value.ToString());
-                quantity = Convert.ToInt32(row.Cells["qugv"].Value.ToString());
-                total = Convert.ToInt32(row.Cells["totgv"].Value.ToString());
-                OleDbCommand cmd = new OleDbCommand("insert into PURCHASES values(" + purID + "," + proID + "," + quantity + "," + total + ")", pr.conn);
-                pr.conn.Open();
-                cmd.ExecuteNonQuery();
-                pr.conn.Close();
-                int q = 0;
-                object ob = getProductQuantity(proID);
-                if (ob != null)
+                purID = purchaceinvoiceid;
+                foreach (DataGridViewRow row in productGV.Rows)
                 {
-                    q = Convert.ToInt32(ob);
-                    updateStock(q, proID, quantity);
+                    proID = quantity = total = 0;
+                    proID = Convert.ToInt32(row.Cells["idgv"].Value.ToString());
+                    quantity = Convert.ToInt32(row.Cells["qugv"].Value.ToString());
+                    total = Convert.ToInt32(row.Cells["totgv"].Value.ToString());
+                    ORCL.Execute("insert into PURCHASES values(" + purID + ", " + proID + ", " + quantity + ", " + total + ")");
+                    int q = 0;
+                    object ob = getProductQuantity(proID);
+                    if (ob != null)
+                    {
+                        q = Convert.ToInt32(ob);
+                        updateStock(q, proID, quantity);
+                    }
+                    else
+                    {
+                        insertStock(proID, quantity);
+                    }
+                    coun++;
                 }
-                else
-                {
-                    insertStock(proID, quantity);
-                }
-                coun++;
-            }
+            } 
+            catch (Exception) { } 
+            finally { ORCL.Dispose(); }
+            
             return coun;
         }
         object productstockcount ;
         private object getProductQuantity(int proID)
         {
-            string query = "select QUANTITY from stock where PRODUCT_ID = "+proID+"";
-            OleDbCommand cmd = new OleDbCommand(query, pr.conn);
-            pr.conn.Open();
-            productstockcount =cmd.ExecuteScalar();
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try 
+            {
+                string query = "select QUANTITY from stock where PRODUCT_ID = "+proID+"";
+                productstockcount = ORCL.Query<dynamic>(query).FirstOrDefault();
+            }
+            catch { } 
+            finally { ORCL.Dispose(); }
             return productstockcount;
         }
 
@@ -163,19 +174,25 @@ namespace AutoStore
 
         private void insertStock(int proID, int quantity)
         {
-            OleDbCommand cmd = new OleDbCommand("insert into stock values(" + proID + "," + quantity + ")", pr.conn);
-            pr.conn.Open();
-            cmd.ExecuteNonQuery();
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                ORCL.Execute("insert into stock values(" + proID + "," + quantity + ")");
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void updateStock(int quan, int proID, int quantity)
         {
-            quan += quantity;
-            OleDbCommand cmd = new OleDbCommand("update stock s set s.QUANTITY = " + quan + "where s.PRODUCT_ID = " + proID + "", pr.conn);
-            pr.conn.Open();
-            cmd.ExecuteNonQuery();
-            pr.conn.Close();   
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                quan += quantity;
+                ORCL.Execute("update stock s set s.QUANTITY = " + quan + "where s.PRODUCT_ID = " + proID + "");
+            }
+            catch { }
+            finally { ORCL.Dispose(); }  
         }
 
         private void saveBtn()
@@ -217,13 +234,18 @@ namespace AutoStore
 
         private void addToCart()
         {
-            if (quantitytxt.Text == "")
+            if (proPrice.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Please Select Product", "Error");
+                MessageBox.Show("Please Select Product!", "Error");
                 proPrice.Text = "";
                 quantitytxt.Text = "";
-                producttext.Text = "Select.....";
+                //producttext.Text = "Select.....";
                 producttext.Focus();
+            }
+            else if (quantitytxt.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Please Enter Quantity!", "Error");
+                quantitytxt.Focus();
             }
             else
             {
@@ -265,16 +287,15 @@ namespace AutoStore
         private void producttext_TextChanged(object sender, EventArgs e)
         {
             int selectedProductID = (int)producttext.SelectedValue;
-            pr.conn.Open();
-            string query = "select p.Price from products p where p.id = " + selectedProductID + "";
-            OleDbCommand command = new OleDbCommand(query, pr.conn);
-            OleDbDataReader odr = command.ExecuteReader();
-            while (odr.Read())
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                proPrice.Text = odr.GetValue(0).ToString();
+                string query = "select p.Price from products p where p.id = " + selectedProductID + "";
+                proPrice.Text = ORCL.Query<string>(query).FirstOrDefault();
+                quantitytxt.Focus();
             }
-            pr.conn.Close();
-            quantitytxt.Focus();
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void quantitytxt_TextChange(object sender, EventArgs e)
@@ -305,10 +326,15 @@ namespace AutoStore
         int invoiceID;
         private int getPurchaseInvoiceID()
         {
-            OleDbCommand command = new OleDbCommand("SELECT id FROM (SELECT p.id FROM purchaseinvoice p ORDER BY p.id DESC) WHERE ROWNUM = 1", pr.conn);
-            pr.conn.Open();
-            invoiceID = Convert.ToInt32(command.ExecuteScalar());
-            pr.conn.Close();
+            int invoiceID = 0;
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                invoiceID = ORCL.Query<int>("SELECT id FROM (SELECT p.id FROM purchaseinvoice p ORDER BY p.id DESC) WHERE ROWNUM = 1").FirstOrDefault();
+
+            }
+            catch (Exception) { }
+            finally { ORCL.Dispose(); }
             return invoiceID;
         }
 

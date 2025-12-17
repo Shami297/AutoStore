@@ -30,34 +30,34 @@ namespace AutoStore
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recover));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.nameText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.pwdText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.nameText = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pwdText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.closeBtn = new System.Windows.Forms.Button();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.emailText = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.emailText = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.Show = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -169,7 +169,7 @@ namespace AutoStore
             this.nameText.SelectionStart = 0;
             this.nameText.ShortcutsEnabled = true;
             this.nameText.Size = new System.Drawing.Size(200, 35);
-            this.nameText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.nameText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.nameText.TabIndex = 0;
             this.nameText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.nameText.TextMarginBottom = 0;
@@ -243,7 +243,7 @@ namespace AutoStore
             this.pwdText.SelectionStart = 0;
             this.pwdText.ShortcutsEnabled = true;
             this.pwdText.Size = new System.Drawing.Size(200, 35);
-            this.pwdText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.pwdText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.pwdText.TabIndex = 1;
             this.pwdText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.pwdText.TextMarginBottom = 0;
@@ -370,7 +370,7 @@ namespace AutoStore
             this.emailText.SelectionStart = 0;
             this.emailText.ShortcutsEnabled = true;
             this.emailText.Size = new System.Drawing.Size(252, 35);
-            this.emailText.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.emailText.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.emailText.TabIndex = 0;
             this.emailText.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.emailText.TextMarginBottom = 0;
@@ -442,7 +442,6 @@ namespace AutoStore
             stateProperties13.ForeColor = System.Drawing.Color.White;
             stateProperties13.IconLeftImage = null;
             stateProperties13.IconRightImage = null;
-            this.Show.onHoverState = stateProperties13;
             stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             stateProperties14.BorderRadius = 3;
             stateProperties14.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -451,7 +450,6 @@ namespace AutoStore
             stateProperties14.ForeColor = System.Drawing.Color.White;
             stateProperties14.IconLeftImage = null;
             stateProperties14.IconRightImage = null;
-            this.Show.OnPressedState = stateProperties14;
             this.Show.Size = new System.Drawing.Size(284, 61);
             this.Show.TabIndex = 3;
             this.Show.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -494,17 +492,17 @@ namespace AutoStore
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuCustomLabel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Show;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox pwdText;
+        private Bunifu.UI.WinForms.BunifuTextBox pwdText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox emailText;
+        private Bunifu.UI.WinForms.BunifuTextBox emailText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.Button closeBtn;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox nameText;
+        private Bunifu.UI.WinForms.BunifuTextBox nameText;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }

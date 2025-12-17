@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dapper;
+using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Linq;
@@ -12,20 +14,14 @@ namespace AutoStore.Logic
         public List<Vendor> GetVendors()
         {
             List<Vendor> vendors = new List<Vendor>();
-            string query = "select v.ID, v.COMPANY from vendors v";
-            OleDbConnection connection = new OleDbConnection("Provider=MSDAORA;Data Source=ORCL;Persist Security Info=True;User ID=HR;Password=HR;Unicode=True");
-            connection.Open();
-            OleDbCommand command = new OleDbCommand(query, connection);
-            OleDbDataReader odr = command.ExecuteReader();
-
-            while (odr.Read())
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                Vendor vendor = new Vendor();
-                vendor.ID = Convert.ToInt32(odr.GetValue(0).ToString()); //odr.GetInt32(0);
-                vendor.Name = odr.GetString(1);
-                vendors.Add(vendor);
+                string query = "select v.ID, v.COMPANY as Name from vendors v";
+                vendors = ORCL.Query<Vendor>(query).ToList();
             }
-            connection.Close();
+            catch { }
+            finally { ORCL.Dispose(); }
             return vendors;
         }
     }

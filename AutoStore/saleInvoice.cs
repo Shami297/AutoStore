@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
+using Oracle.ManagedDataAccess.Client;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
+using System.Data.OleDb;
 
 namespace AutoStore
 {
@@ -91,45 +93,51 @@ namespace AutoStore
         int saleInvoiceID;
         private int insertSaleInvoice()
         {
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                int vendorsID = (int)customerText.SelectedValue;
+                ORCL.Execute("insert into SALEINVOICE values('" + idText.Text + "','" +datePick.Text + "'," + vendorsID + ")");
+                saleInvoiceID = ORCL.Query<int>("SELECT id FROM (SELECT s.id FROM SALEINVOICE s ORDER BY s.id DESC) WHERE ROWNUM = 1").FirstOrDefault();
 
-            int vendorsID = (int)customerText.SelectedValue;
-            OleDbCommand cmd = new OleDbCommand("insert into SALEINVOICE values('" + idText.Text + "','" +
-              datePick.Text + "'," + vendorsID + ")", pr.conn);
-            pr.conn.Open();
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "SELECT id FROM (SELECT s.id FROM SALEINVOICE s ORDER BY s.id DESC) WHERE ROWNUM = 1";
-            saleInvoiceID = Convert.ToInt32(cmd.ExecuteScalar());
-            pr.conn.Close();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
             return saleInvoiceID;
         }
 
         int coun = 0;
         private int insertSaleinvoicedetails()
         {
-            int purID, proID, quantity, total;
-            purID = saleInvoiceID;
-            foreach (DataGridViewRow row in productGV.Rows)
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                proID = quantity = total = 0;
-                proID = Convert.ToInt32(row.Cells["idgv"].Value.ToString());
-                quantity = Convert.ToInt32(row.Cells["qugv"].Value.ToString());
-                total = Convert.ToInt32(row.Cells["totgv"].Value.ToString());
-                OleDbCommand cmd = new OleDbCommand("insert into sales values(" + purID + "," + proID + "," + quantity + "," + total + ")", pr.conn);
-                pr.conn.Open();
-                cmd.ExecuteNonQuery();
-                pr.conn.Close();
-                int num = 0;
-                num = getProductQuantity(proID);
-                if(num > 0)
+                int purID, proID, quantity, total;
+                purID = saleInvoiceID;
+                foreach (DataGridViewRow row in productGV.Rows)
                 {
-                    updateStock(num, proID, quantity);
+                    proID = quantity = total = 0;
+                    proID = Convert.ToInt32(row.Cells["idgv"].Value.ToString());
+                    quantity = Convert.ToInt32(row.Cells["qugv"].Value.ToString());
+                    total = Convert.ToInt32(row.Cells["totgv"].Value.ToString());
+                    ORCL.Execute("insert into sales values(" + purID + "," + proID + "," + quantity + "," + total + ")");
+                    int num = 0;
+                    num = getProductQuantity(proID);
+                    if (num > 0)
+                    {
+                        updateStock(num, proID, quantity);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stock is Not Available", "OutOfStock");
+                    }
+                    coun++;
                 }
-                else
-                {
-                    MessageBox.Show("Stock is Not Available", "OutOfStock");
-                }
-                coun++;
+
             }
+            catch { }
+            finally { ORCL.Dispose(); }
+            
             return coun;
         }
 
@@ -184,33 +192,34 @@ namespace AutoStore
 
         private void quantityInStock()
         {
-            int selectedProductID = (int)productText.SelectedValue;
-            pr.conn.Open();
-            string query = "select s.quantity from products p, stock s where p.id  = " + selectedProductID + "and" +
-                " p.id = s.PRODUCT_ID";
-            OleDbCommand command = new OleDbCommand(query, pr.conn);
-            OleDbDataReader odr = command.ExecuteReader();
-            while (odr.Read())
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                stockQuantity.Text = odr.GetValue(0).ToString();
+                int selectedProductID = (int)productText.SelectedValue;
+                string query = "select s.quantity from products p, stock s where p.id  = " + selectedProductID + "and" +" p.id = s.PRODUCT_ID";
+                var quan = ORCL.Query<string>(query).FirstOrDefault();
+                if (quan != null) { stockQuantity.Text = quan; }
             }
-            pr.conn.Close();
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void productText_TextChanged_1(object sender, EventArgs e)
         {
-            int selectedProductID = (int)productText.SelectedValue;
-            pr.conn.Open();
-            string query = "select ((p.Price * 20)/100 + p.Price) from products p where p.id = " + selectedProductID + "";
-            OleDbCommand command = new OleDbCommand(query, pr.conn);
-            OleDbDataReader odr = command.ExecuteReader();
-            while (odr.Read())
+            OracleConnection ORCL = Connection.GetConnection();
+            try
             {
-                proPrice.Text = odr.GetValue(0).ToString();
+                int selectedProductID = (int)productText.SelectedValue;
+                string query = "select ((p.Price * 20)/100 + p.Price) from products p where p.id = " + selectedProductID + "";
+                var PRI = ORCL.Query<string>(query).FirstOrDefault();
+                if (PRI != null) { proPrice.Text = PRI; }
+                quantityInStock();
+                quantityText.Text = string.Empty;
+                quantityText.Focus();
             }
-            pr.conn.Close();
-            quantityInStock();
-            quantityText.Focus();
+            catch { }
+            finally { ORCL.Dispose(); }
+            
         }
 
         //-----------------------Generate ID---------------
@@ -218,10 +227,13 @@ namespace AutoStore
         int invoiceID;
         private int getSaleInvoiceID()
         {
-            OleDbCommand command = new OleDbCommand("SELECT id FROM (SELECT s.id FROM SALEINVOICE s ORDER BY s.id DESC) WHERE ROWNUM = 1", pr.conn);
-            pr.conn.Open();
-            invoiceID = Convert.ToInt32(command.ExecuteScalar());
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                invoiceID = ORCL.Query<int>("SELECT id FROM (SELECT s.id FROM SALEINVOICE s ORDER BY s.id DESC) WHERE ROWNUM = 1").FirstOrDefault();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
             return invoiceID;
         }
 
@@ -253,6 +265,7 @@ namespace AutoStore
                     if(quantity > stock)
                     {
                         MessageBox.Show("Stock is not Enough", "Out of Stock");
+                        quantityText.Text = stockQuantity.Text;
                     }
                     else
                     {
@@ -284,17 +297,24 @@ namespace AutoStore
 
         private void addToCart1()
         {
-            if (quantityText.Text == "")
+            if (proPrice.Text.Trim() == string.Empty || productText.Text == "Select.....")
             {
                 MessageBox.Show("Please Select Product", "Error");
                 quantityText.Text = "";
                 proPrice.Text = "";
-                productText.Text = "Select.....";
+                //productText.Text = "Select.....";
 
+            }
+            else if (quantityText.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Please Enter Quantity", "Error");
+                quantityText.Focus();
             }
             else
             {
                 int productID = (int)productText.SelectedValue;
+                bool error = false;
+                int maxQuan = Convert.ToInt32(stockQuantity.Text);
                 foreach (DataGridViewRow row in productGV.Rows)
                 {
                     int addedProId = Convert.ToInt32(row.Cells["idgv"].Value.ToString());
@@ -303,6 +323,15 @@ namespace AutoStore
                         int total = Convert.ToInt32(row.Cells["totgv"].Value.ToString());
                         int quantity = Convert.ToInt32(row.Cells["qugv"].Value.ToString());
                         int quan = Convert.ToInt32(quantityText.Text);
+                        if (quantity >= maxQuan)
+                        {
+                            error = true;
+                            break;
+                        }
+                        else if ((quantity + quan) > maxQuan)
+                        {
+                            quan = maxQuan - quantity;
+                        }
                         quan = quantity + quan;
                         total += Convert.ToInt32(totalLabel.Text);
                         row.Cells["qugv"].Value = quan.ToString();
@@ -310,6 +339,11 @@ namespace AutoStore
                         grossLabel.Text = (Convert.ToInt32(totalLabel.Text) + Convert.ToInt32(grossLabel.Text)).ToString();
                         goto found;
                     }
+                }
+                if (error)
+                {
+                    MessageBox.Show("Maximum Quanity is already added in Cart!", "Error");
+                    return;
                 }
                 int selectedProductID = (int)productText.SelectedValue;
                 productGV.Rows.Add(selectedProductID, productText.Text, proPrice.Text, quantityText.Text, totalLabel.Text);
@@ -333,21 +367,28 @@ namespace AutoStore
         int productstockcount;
         private int getProductQuantity(int proID)
         {
-            string query = "select QUANTITY from stock where PRODUCT_ID = " + proID + "";
-            OleDbCommand cmd = new OleDbCommand(query, pr.conn);
-            pr.conn.Open();
-            productstockcount = Convert.ToInt32(cmd.ExecuteScalar());
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                string query = "select QUANTITY from stock where PRODUCT_ID = " + proID + "";
+                productstockcount = ORCL.Query<int>(query).FirstOrDefault();
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
+            
             return productstockcount;
         }
 
         private void updateStock(int quan, int proID, int quantity)
         {
-            quan -= quantity;
-            OleDbCommand cmd = new OleDbCommand("update stock s set s.QUANTITY = " + quan + "where s.PRODUCT_ID = " + proID + "", pr.conn);
-            pr.conn.Open();
-            cmd.ExecuteNonQuery();
-            pr.conn.Close();
+            OracleConnection ORCL = Connection.GetConnection();
+            try
+            {
+                quan -= quantity;
+                ORCL.Execute("update stock s set s.QUANTITY = " + quan + "where s.PRODUCT_ID = " + proID + "");
+            }
+            catch { }
+            finally { ORCL.Dispose(); }
         }
 
         private void salesView_Click(object sender, EventArgs e)
