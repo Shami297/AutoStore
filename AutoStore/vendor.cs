@@ -81,7 +81,7 @@ namespace AutoStore
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                var vendr = ORCL.Query<vendorView>("select ID, Company, Address, CONTACTPERSON as Name, CELLNO as Phone from vendors").ToList();
+                var vendr = ORCL.Query<vendorView>("select ID, Company, Address, CONTACTPERSON as Name, CELLNO as Phone from vendors ORDER BY ID").ToList();
                 vendorGV.AutoGenerateColumns = true;
                 vendorGV.DataSource = null;
                 vendorGV.DataSource = vendr;

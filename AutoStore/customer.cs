@@ -82,7 +82,7 @@ namespace AutoStore
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                var custmr = ORCL.Query<custView>("select cstmr_id as ID, cstmr_name as Name, cstmr_address as Address,cstmr_city as City, cstmr_no as Phone  from customer").ToList();
+                var custmr = ORCL.Query<custView>("select cstmr_id as ID, cstmr_name as Name, cstmr_address as Address,cstmr_city as City, cstmr_no as Phone  from customer ORDER BY cstmr_id").ToList();
 
                 customergv.AutoGenerateColumns = true;
                 customergv.DataSource = null;

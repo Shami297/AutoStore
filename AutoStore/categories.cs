@@ -40,7 +40,7 @@ namespace AutoStore
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                var categories = ORCL.Query<catView>("select cat_id as ID,cat_name as Name, cat_isActive as Active from categories").ToList();
+                var categories = ORCL.Query<catView>("select cat_id as ID,cat_name as Name, cat_isActive as Active from categories ORDER BY cat_id").ToList();
 
                 categoryGV.AutoGenerateColumns = true;
                 categoryGV.DataSource = null;

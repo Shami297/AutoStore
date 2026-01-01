@@ -94,7 +94,7 @@ namespace AutoStore
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                var users = ORCL.Query<usersView>("select usr_ID as ID, usr_name as Name, usr_usrname as userName, usr_password as Password, usr_email as Email, usr_phoneno as Phone, usr_isactive as Active from users").ToList();
+                var users = ORCL.Query<usersView>("select usr_ID as ID, usr_name as Name, usr_usrname as userName, usr_password as Password, usr_email as Email, usr_phoneno as Phone, usr_isactive as Active from users ORDER BY usr_ID").ToList();
                 
 
                 // Bind to grid

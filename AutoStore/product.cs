@@ -87,7 +87,7 @@ namespace AutoStore
                         p.price as Price, 
                         c.cat_name as Category
                       from products p
-                      join categories c on p.catid = c.cat_id"
+                      join categories c on p.catid = c.cat_id ORDER BY p.id"
                 ).ToList();
 
                 GV.AutoGenerateColumns = true;

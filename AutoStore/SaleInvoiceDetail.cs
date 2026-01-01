@@ -45,7 +45,7 @@ namespace AutoStore
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                var sales = ORCL.Query<sInvoiceDetailView>("SELECT p.name, s.quantity, s.total from SALEINVOICE si LEFT JOIN sales s ON s.SALINVOICE_ID = si.ID LEFT JOIN products p ON p.id = s.product_id where si.ID = "+ saleID);
+                var sales = ORCL.Query<sInvoiceDetailView>("SELECT p.name, s.quantity, s.total from SALEINVOICE si LEFT JOIN sales s ON s.SALINVOICE_ID = si.ID LEFT JOIN products p ON p.id = s.product_id where si.ID = "+ saleID + " ORDER BY si.ID");
                 saleGV.DataSource = sales;
             }
             catch { }
