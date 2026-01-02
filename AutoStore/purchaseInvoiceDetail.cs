@@ -52,9 +52,8 @@ namespace AutoStore
             this.Close();
             purchase.Show();
         }
-        private void showPurchases()
+        private void showPurchases(int invoiceID)
         {
-            int invoiceID = (int)selectText.SelectedValue;
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
@@ -72,8 +71,15 @@ namespace AutoStore
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            showPurchases();
-            grossLabel.Text = grossSale().ToString();
+            int invoiceID = Convert.ToInt32(selectText.SelectedValue);
+
+            if (invoiceID > 0)
+            {
+                showPurchases(invoiceID);
+                grossLabel.Text = grossSale().ToString();
+            }
+            else
+                MessageBox.Show("Please Select the Invoice!");
         }
 
         private int grossSale()
