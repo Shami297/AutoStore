@@ -49,13 +49,20 @@ namespace AutoStore
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            showPurchases();
-            invoiceGV.AllowUserToAddRows = false;
+            int purchaseID = Convert.ToInt32(selectInvoice.SelectedValue);
+
+            if(purchaseID > 0)
+            {
+                showPurchases(purchaseID);
+                invoiceGV.AllowUserToAddRows = false;
+            }
+            else
+                MessageBox.Show("Please Select Purchaseinvoice", "Error");
         }
 
-        private void showPurchases()
+        private void showPurchases(int purchaseID)
         {
-            int purchaseID = (int)selectInvoice.SelectedValue;
+            
             OracleConnection ORCL = Connection.GetConnection();
             try
             {

@@ -36,9 +36,9 @@ namespace AutoStore
             invoiceGV.AllowUserToAddRows = false;
         }
 
-        private void showSales()
+        private void showSales(int saleID)
         {
-            int saleID = (int)selectInvoice.SelectedValue;
+            
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
@@ -68,8 +68,15 @@ namespace AutoStore
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            showSales();
-            invoiceGV.AllowUserToAddRows = false;
+            int saleID = (int)selectInvoice.SelectedValue;
+
+            if(saleID > 0)
+            {
+                showSales(saleID);
+                invoiceGV.AllowUserToAddRows = false;
+            }
+            else
+                MessageBox.Show("Please Select SaleInvoice!", "Error");
         }
 
         private void invoiceGV_CellContentClick(object sender, DataGridViewCellEventArgs e)

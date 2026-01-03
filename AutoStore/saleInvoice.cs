@@ -91,12 +91,12 @@ namespace AutoStore
         }
 
         int saleInvoiceID;
-        private int insertSaleInvoice()
+        private int insertSaleInvoice(int vendorsID)
         {
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
-                int vendorsID = (int)customerText.SelectedValue;
+                
                 ORCL.Execute("insert into SALEINVOICE values('" + idText.Text + "','" +datePick.Text + "'," + vendorsID + ")");
                 saleInvoiceID = ORCL.Query<int>("SELECT id FROM (SELECT s.id FROM SALEINVOICE s ORDER BY s.id DESC) WHERE ROWNUM = 1").FirstOrDefault();
 
@@ -145,16 +145,24 @@ namespace AutoStore
         {
             if (productGV.Rows.Count > 0)
             {
-                insertSaleInvoice();
-                insertSaleinvoicedetails();
-                if (coun > 0)
+                int vendorsID = Convert.ToInt32(customerText.SelectedValue);
+
+                if(vendorsID > 0)
                 {
-                    MessageBox.Show("Saleinvoice Successfully Generated", "Success");
+                    insertSaleInvoice(vendorsID);
+                    insertSaleinvoicedetails();
+                    if (coun > 0)
+                    {
+                        MessageBox.Show("Saleinvoice Successfully Generated", "Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to Generated Saleinvoice", "Error");
+                    }
                 }
                 else
-                {
-                    MessageBox.Show("Unable to Generated Saleinvoice", "Error");
-                }
+                    MessageBox.Show("Please Select Vendor!", "Error");
+
             }
 
         }

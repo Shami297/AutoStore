@@ -108,10 +108,10 @@ namespace AutoStore
             }
         }
         int purchaceinvoiceid;
-        private int insertpurchaseinvoice()
+        private int insertpurchaseinvoice(int vendorsID)
         {
             OracleConnection ORCL = Connection.GetConnection();
-            int vendorsID = (int)vendorText.SelectedValue;
+            
             try
             {
                 ORCL.Execute("INSERT INTO PURCHASEINVOICE VALUES ('" + idText.Text + "', '" +dateText.Text + "'," + vendorsID + ")");
@@ -199,17 +199,24 @@ namespace AutoStore
         {
             if (productGV.Rows.Count > 0)
             {
-                insertpurchaseinvoice();
-                insertpurchaseinvoicedetails();
-                afterSave();
-                if (coun > 0)
+                int vendorsID = Convert.ToInt32(vendorText.SelectedValue);
+
+                if(vendorsID > 0)
                 {
-                    MessageBox.Show("Purchaseinvoice Successfully Generated", "Success");
+                    insertpurchaseinvoice(vendorsID);
+                    insertpurchaseinvoicedetails();
+                    afterSave();
+                    if (coun > 0)
+                    {
+                        MessageBox.Show("Purchaseinvoice Successfully Generated", "Success");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to Generated Purchaseinvoice", "Error");
+                    }
                 }
                 else
-                {
-                    MessageBox.Show("Unable to Generated Purchaseinvoice", "Error");
-                }
+                    MessageBox.Show("Please Select Vendor!", "Error");
             }
 
         }

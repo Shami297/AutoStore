@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "D:\\GITHUB\\AutoStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|d:\\github\\autostore\\autostore\\vendorreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\vendorreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\saleinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\saleinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\purchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\purchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\customerreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\customerreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\main1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|d:\\github\\autostore\\autostore\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -47,20 +83,12 @@
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\purchaseinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\saleinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\saleinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\saleinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\saleinvoicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\saleinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\saleinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\purchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\purchaseinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\saleinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -75,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\purchasereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -87,16 +111,8 @@
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\salereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\vendorreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\vendorreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\vendorreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\vendorreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\customerreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\customerreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\customerreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -109,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\salereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\salereturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -129,10 +141,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\purchaseinvoice.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\purchaseinvoice.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -171,10 +179,6 @@
       "RelativeMoniker": "D:0:0:{FD5948EC-2F11-41B8-BD37-5ABBEBD56F18}|AutoStore.Logic\\AutoStore.Logic.csproj|solutionrelative:autostore.logic\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|D:\\GITHUB\\AutoStore\\autostore\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82D3A051-926C-4731-B43F-CEF561A4FDAC}|AutoStore\\AutoStore.csproj|solutionrelative:autostore\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -190,24 +194,200 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
+              "Title": "categories.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\categories.cs",
+              "RelativeDocumentMoniker": "AutoStore\\categories.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\categories.cs",
+              "RelativeToolTip": "AutoStore\\categories.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAEwCoAAACSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-01T08:13:30.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "product.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs",
+              "RelativeDocumentMoniker": "AutoStore\\product.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs",
+              "RelativeToolTip": "AutoStore\\product.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAEwE0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:12:27.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "customer.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.cs",
+              "RelativeDocumentMoniker": "AutoStore\\customer.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.cs",
+              "RelativeToolTip": "AutoStore\\customer.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAawFQAAAC9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:31:50.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerReport.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\CustomerReport.cs",
+              "RelativeDocumentMoniker": "AutoStore\\CustomerReport.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\CustomerReport.cs",
+              "RelativeToolTip": "AutoStore\\CustomerReport.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAawCkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T18:43:45.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DashBoard.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs",
+              "RelativeDocumentMoniker": "AutoStore\\DashBoard.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs",
+              "RelativeToolTip": "AutoStore\\DashBoard.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAEwCcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:15:10.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "purchaseInvoice.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.cs",
               "RelativeDocumentMoniker": "AutoStore\\purchaseInvoice.cs",
               "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.cs",
               "RelativeToolTip": "AutoStore\\purchaseInvoice.cs",
-              "ViewState": "AgIAAAMBAAAAAAAAAAAAAOoAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0BAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:54:53.907Z",
+              "WhenOpened": "2025-12-15T17:54:53.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SaleInvoiceDetail.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs",
+              "RelativeDocumentMoniker": "AutoStore\\SaleInvoiceDetail.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs",
+              "RelativeToolTip": "AutoStore\\SaleInvoiceDetail.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwDAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T18:32:35.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Stock.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Stock.cs",
+              "RelativeDocumentMoniker": "AutoStore\\Stock.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Stock.cs",
+              "RelativeToolTip": "AutoStore\\Stock.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwB8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:00:35.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "users.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\users.cs",
+              "RelativeDocumentMoniker": "AutoStore\\users.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\users.cs",
+              "RelativeToolTip": "AutoStore\\users.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAuwGAAAADoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T19:04:30.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vendor.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\vendor.cs",
+              "RelativeDocumentMoniker": "AutoStore\\vendor.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\vendor.cs",
+              "RelativeToolTip": "AutoStore\\vendor.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAawFMAAACQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:44:27.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VendorReport.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\VendorReport.cs",
+              "RelativeDocumentMoniker": "AutoStore\\VendorReport.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\VendorReport.cs",
+              "RelativeToolTip": "AutoStore\\VendorReport.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwDEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T18:53:57.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
+              "Title": "product.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs",
+              "RelativeDocumentMoniker": "AutoStore\\product.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs [Design]",
+              "RelativeToolTip": "AutoStore\\product.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:17:31.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "purchaseInvoice.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.cs",
+              "RelativeDocumentMoniker": "AutoStore\\purchaseInvoice.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.cs [Design]",
+              "RelativeToolTip": "AutoStore\\purchaseInvoice.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:54:44.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DashBoard.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs",
+              "RelativeDocumentMoniker": "AutoStore\\DashBoard.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs [Design]",
+              "RelativeToolTip": "AutoStore\\DashBoard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:10:57.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs",
+              "RelativeDocumentMoniker": "AutoStore\\Form1.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs",
+              "RelativeToolTip": "AutoStore\\Form1.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwDUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:11:22.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs",
+              "RelativeDocumentMoniker": "AutoStore\\Form1.cs",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs [Design]",
+              "RelativeToolTip": "AutoStore\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:11:17.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "purchaseInvoiceDetail.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoiceDetail.cs",
               "RelativeDocumentMoniker": "AutoStore\\purchaseInvoiceDetail.cs",
@@ -219,94 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "users.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\users.cs",
-              "RelativeDocumentMoniker": "AutoStore\\users.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\users.cs",
-              "RelativeToolTip": "AutoStore\\users.cs",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAIwP0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T19:04:30.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs",
-              "RelativeDocumentMoniker": "AutoStore\\Form1.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs [Design]",
-              "RelativeToolTip": "AutoStore\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:11:17.089Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs",
-              "RelativeDocumentMoniker": "AutoStore\\Form1.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.cs",
-              "RelativeToolTip": "AutoStore\\Form1.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwDUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:11:22.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DashBoard.cs [Design]",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs",
-              "RelativeDocumentMoniker": "AutoStore\\DashBoard.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs [Design]",
-              "RelativeToolTip": "AutoStore\\DashBoard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:10:57.323Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "purchaseInvoice.cs [Design]",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.cs",
-              "RelativeDocumentMoniker": "AutoStore\\purchaseInvoice.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.cs [Design]",
-              "RelativeToolTip": "AutoStore\\purchaseInvoice.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:54:44.045Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "product.cs [Design]",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs",
-              "RelativeDocumentMoniker": "AutoStore\\product.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs [Design]",
-              "RelativeToolTip": "AutoStore\\product.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:17:31.828Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "product.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs",
-              "RelativeDocumentMoniker": "AutoStore\\product.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\product.cs",
-              "RelativeToolTip": "AutoStore\\product.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAiwE0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:12:27.759Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "Main1.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Main1.cs",
               "RelativeDocumentMoniker": "AutoStore\\Main1.cs",
@@ -314,24 +407,22 @@
               "RelativeToolTip": "AutoStore\\Main1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T18:50:09.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T18:50:09.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "users.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\users.cs",
               "RelativeDocumentMoniker": "AutoStore\\users.cs",
               "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\users.cs [Design]",
               "RelativeToolTip": "AutoStore\\users.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T19:04:25.216Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-15T19:04:25.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "purchaseInvoiceDetail.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoiceDetail.cs",
               "RelativeDocumentMoniker": "AutoStore\\purchaseInvoiceDetail.cs",
@@ -342,30 +433,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SaleInvoiceDetail.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs",
-              "RelativeDocumentMoniker": "AutoStore\\SaleInvoiceDetail.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs",
-              "RelativeToolTip": "AutoStore\\SaleInvoiceDetail.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAACUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T18:32:35.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "SaleInvoiceDetail.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs",
               "RelativeDocumentMoniker": "AutoStore\\SaleInvoiceDetail.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleInvoiceDetail.cs [Design]",
+              "RelativeToolTip": "AutoStore\\SaleInvoiceDetail.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T18:32:33.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "saleInvoice.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\saleInvoice.cs",
               "RelativeDocumentMoniker": "AutoStore\\saleInvoice.cs",
@@ -377,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "saleInvoice.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\saleInvoice.cs",
               "RelativeDocumentMoniker": "AutoStore\\saleInvoice.cs",
@@ -389,18 +468,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "CustomerReport.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\CustomerReport.cs",
-              "RelativeDocumentMoniker": "AutoStore\\CustomerReport.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\CustomerReport.cs",
-              "RelativeToolTip": "AutoStore\\CustomerReport.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwFQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T18:43:45.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
               "Title": "purchaseReturn.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseReturn.cs",
               "RelativeDocumentMoniker": "AutoStore\\purchaseReturn.cs",
@@ -412,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "purchaseReturn.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseReturn.cs",
               "RelativeDocumentMoniker": "AutoStore\\purchaseReturn.cs",
@@ -423,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "SaleReturn.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleReturn.cs",
               "RelativeDocumentMoniker": "AutoStore\\SaleReturn.cs",
@@ -435,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "licenses.licx",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Properties\\licenses.licx",
               "RelativeDocumentMoniker": "AutoStore\\Properties\\licenses.licx",
@@ -443,69 +510,44 @@
               "RelativeToolTip": "AutoStore\\Properties\\licenses.licx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-15T18:42:07.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T18:42:07.919Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "CustomerReport.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\CustomerReport.cs",
               "RelativeDocumentMoniker": "AutoStore\\CustomerReport.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\CustomerReport.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\CustomerReport.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\CustomerReport.cs [Design]",
+              "RelativeToolTip": "AutoStore\\CustomerReport.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T18:43:43.909Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "VendorReport.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\VendorReport.cs",
-              "RelativeDocumentMoniker": "AutoStore\\VendorReport.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\VendorReport.cs",
-              "RelativeToolTip": "AutoStore\\VendorReport.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAiwEwAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T18:53:57.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "VendorReport.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\VendorReport.cs",
               "RelativeDocumentMoniker": "AutoStore\\VendorReport.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\VendorReport.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\VendorReport.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\VendorReport.cs [Design]",
+              "RelativeToolTip": "AutoStore\\VendorReport.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T19:00:10.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Stock.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Stock.cs",
               "RelativeDocumentMoniker": "AutoStore\\Stock.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\Stock.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\Stock.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Stock.cs [Design]",
+              "RelativeToolTip": "AutoStore\\Stock.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T19:00:32.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Stock.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Stock.cs",
-              "RelativeDocumentMoniker": "AutoStore\\Stock.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\Stock.cs",
-              "RelativeToolTip": "AutoStore\\Stock.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAUwBoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T19:00:35.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "Connection.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\Connection.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\Connection.cs",
@@ -517,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "SaleReturn.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\SaleReturn.cs",
               "RelativeDocumentMoniker": "AutoStore\\SaleReturn.cs",
@@ -528,41 +570,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "categories.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\categories.cs",
               "RelativeDocumentMoniker": "AutoStore\\categories.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\categories.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\categories.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\categories.cs [Design]",
+              "RelativeToolTip": "AutoStore\\categories.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T17:56:17.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "customer.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.cs",
               "RelativeDocumentMoniker": "AutoStore\\customer.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\customer.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\customer.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.cs [Design]",
+              "RelativeToolTip": "AutoStore\\customer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T17:43:02.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "customer.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.cs",
-              "RelativeDocumentMoniker": "AutoStore\\customer.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.cs",
-              "RelativeToolTip": "AutoStore\\customer.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAADgv5IAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:31:50.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "pricing.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\pricing.cs",
               "RelativeDocumentMoniker": "AutoStore\\pricing.cs",
@@ -573,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "purchaseInvoice.Designer.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\purchaseInvoice.Designer.cs",
               "RelativeDocumentMoniker": "AutoStore\\purchaseInvoice.Designer.cs",
@@ -581,12 +611,11 @@
               "RelativeToolTip": "AutoStore\\purchaseInvoice.Designer.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAAAEoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:53:57.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T17:53:57.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "customer.Designer.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\customer.Designer.cs",
               "RelativeDocumentMoniker": "AutoStore\\customer.Designer.cs",
@@ -598,30 +627,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "vendor.cs [Design]",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\vendor.cs",
               "RelativeDocumentMoniker": "AutoStore\\vendor.cs",
-              "ToolTip": "D:\\ProjectSoftware\\AutoStore\\AutoStore\\vendor.cs [Design]",
-              "RelativeToolTip": "..\\..\\ProjectSoftware\\AutoStore\\AutoStore\\vendor.cs [Design]",
+              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\vendor.cs [Design]",
+              "RelativeToolTip": "AutoStore\\vendor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T17:44:23.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "vendor.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\vendor.cs",
-              "RelativeDocumentMoniker": "AutoStore\\vendor.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\vendor.cs",
-              "RelativeToolTip": "AutoStore\\vendor.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAUwGUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:44:27.281Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "SaleDetailManager.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\SaleDetailManager.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\SaleDetailManager.cs",
@@ -633,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "VendorReportManager.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\VendorReportManager.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\VendorReportManager.cs",
@@ -645,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "VendorManage.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\VendorManage.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\VendorManage.cs",
@@ -657,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "VendorManager.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\VendorManager.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\VendorManager.cs",
@@ -669,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "customerManager.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\customerManager.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\customerManager.cs",
@@ -681,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "CustomerManage.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\CustomerManage.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\CustomerManage.cs",
@@ -693,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "CategoryManager.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore.Logic\\CategoryManager.cs",
               "RelativeDocumentMoniker": "AutoStore.Logic\\CategoryManager.cs",
@@ -705,20 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "DashBoard.cs",
-              "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs",
-              "RelativeDocumentMoniker": "AutoStore\\DashBoard.cs",
-              "ToolTip": "D:\\GITHUB\\AutoStore\\AutoStore\\DashBoard.cs",
-              "RelativeToolTip": "AutoStore\\DashBoard.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAA2wDMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:15:10.403Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\GITHUB\\AutoStore\\AutoStore\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "AutoStore\\Form1.Designer.cs",
@@ -726,8 +730,7 @@
               "RelativeToolTip": "AutoStore\\Form1.Designer.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T12:03:37.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T12:03:37.918Z"
             }
           ]
         }

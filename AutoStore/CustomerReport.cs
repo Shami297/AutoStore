@@ -39,10 +39,10 @@ namespace AutoStore
             customerFill();
         }
 
-        private void showDetail()
+        private void showDetail(int cstmrID)
         {
             OracleConnection ORCL = Connection.GetConnection();
-            int cstmrID = (int)selectCstmr.SelectedValue;
+            
             try
             {
                 var customer = ORCL.Query<cReportView>("SELECT to_char(si.SI_DATE,'DD-MM-YYYY')  AS InvoiceDATE, SUM(s.total) AS Total from saleinvoice si, sales s, customer c where c.cstmr_id = " + cstmrID + " and si.CUSTOMER_ID = " + cstmrID + " and si.id = s.salinvoice_id GROUP BY si.si_date order by si.si_date").ToList();
@@ -54,8 +54,15 @@ namespace AutoStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            showDetail();
-            totalLabel.Text = totalSale().ToString();
+            int cstmrID = Convert.ToInt32(selectCstmr.SelectedValue);
+
+            if (cstmrID > 0)
+            {
+                showDetail(cstmrID);
+                totalLabel.Text = totalSale().ToString();
+            }
+            else
+                MessageBox.Show("Please Select Customer!", "Error");
         }
 
         private int totalSale()

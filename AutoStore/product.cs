@@ -23,9 +23,9 @@ namespace AutoStore
             category.Text = "Select....";
         }
 
-        private void insert()
+        private void insert(int selectedCatgoryID)
         {
-            int selectedCatgoryID = (int)category.SelectedValue;
+            
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
@@ -38,9 +38,9 @@ namespace AutoStore
             finally { ORCL.Dispose(); }
         }
 
-        private void update()
+        private void update(int selectedCatgoryID)
         {
-            int selectedCatgoryID = (int)category.SelectedValue;
+            
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
@@ -217,8 +217,15 @@ namespace AutoStore
 
         private void circularButton3_Click(object sender, EventArgs e)
         {
-            update();
-            show();
+            int selectedCatgoryID = Convert.ToInt32(category.SelectedValue);
+
+            if(selectedCatgoryID > 0)
+            {
+                update(selectedCatgoryID);
+                show();
+            }
+            else
+                MessageBox.Show("Please Select Category!", "Error");
         }
 
         private void GV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -267,8 +274,15 @@ namespace AutoStore
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            insert();
-            show();
+            int selectedCatgoryID = Convert.ToInt32(category.SelectedValue);
+
+            if(selectedCatgoryID > 0)
+            {
+                insert(selectedCatgoryID);
+                show();
+            }
+            else
+                MessageBox.Show("Please Select Category!", "Error");
         }
 
         private void searchText_TextChange(object sender, EventArgs e)

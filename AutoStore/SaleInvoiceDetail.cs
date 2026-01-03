@@ -39,9 +39,9 @@ namespace AutoStore
             loadSaleInvoice();
         }
 
-        private void showSales()
+        private void showSales(int saleID)
         {
-            int saleID = (int)selectSaleInvoice.SelectedValue;
+            
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
@@ -67,8 +67,15 @@ namespace AutoStore
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            showSales();
-            grossLabel.Text = grossSale().ToString();
+            int saleID = Convert.ToInt32(selectSaleInvoice.SelectedValue;
+
+            if(saleID > 0)
+            {
+                showSales(saleID);
+                grossLabel.Text = grossSale().ToString();
+            }
+            else
+                MessageBox.Show("Please Select SaleInvoice!", "Error");
         }
 
         private void datePick_onValueChanged(object sender, EventArgs e)

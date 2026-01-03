@@ -38,9 +38,9 @@ namespace AutoStore
             vendorFill();
         }
 
-        private void showDetail()
+        private void showDetail(int vendrID)
         {
-            int vendrID = (int)selectVendr.SelectedValue;
+            
             OracleConnection ORCL = Connection.GetConnection();
             try
             {
@@ -67,8 +67,15 @@ namespace AutoStore
 
         private void button1_Click(object sender, EventArgs e)
         {
-            showDetail();
-            totalLabel.Text = totalPurchase().ToString();
+            int vendrID = (int)selectVendr.SelectedValue;
+
+            if(vendrID > 0)
+            {
+                showDetail(vendrID);
+                totalLabel.Text = totalPurchase().ToString();
+            }
+            else
+                MessageBox.Show("Please Select Vendor!", "Error");
         }
 
         private void backBtn_Click(object sender, EventArgs e)

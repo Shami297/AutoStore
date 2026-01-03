@@ -219,6 +219,7 @@
             this.circularButton4.TabIndex = 53;
             this.circularButton4.Text = "DELETE";
             this.circularButton4.UseVisualStyleBackColor = false;
+            this.circularButton4.Visible = false;
             this.circularButton4.Click += new System.EventHandler(this.circularButton4_Click);
             // 
             // updateButton
