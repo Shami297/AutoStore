@@ -67,7 +67,7 @@ namespace AutoStore
 
         private void viewBtn_Click(object sender, EventArgs e)
         {
-            int saleID = Convert.ToInt32(selectSaleInvoice.SelectedValue;
+            int saleID = Convert.ToInt32(selectSaleInvoice.SelectedValue);
 
             if(saleID > 0)
             {

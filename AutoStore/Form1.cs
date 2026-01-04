@@ -119,7 +119,8 @@ namespace AutoStore
 
         private void userbox_Leave(object sender, EventArgs e)
         {
-           Main1.IsAlphaNumeric(userbox);
+            if(userbox.Text.Trim() != string.Empty)
+                Main1.IsAlphaNumeric(userbox);
         }
     }
 }
