@@ -61,6 +61,7 @@ namespace AutoStore
 
         private void SaleReturn_Load(object sender, EventArgs e)
         {
+            this.datePicker.Value = DateTime.Now;
             loadInvoice();
             proID1.Hide();
             selectInvoice.Text = "Select.......";

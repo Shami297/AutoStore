@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace AutoStore
@@ -37,6 +38,7 @@ namespace AutoStore
 
         private void purchaseReturn_Load(object sender, EventArgs e)
         {
+            this.datePicker.Value = DateTime.Now;
             loadInvoice();
             proID1.Hide();
             selectInvoice.Text = "Select.......";
