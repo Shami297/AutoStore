@@ -356,7 +356,7 @@
             this.circularButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.circularButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton3.ForeColor = System.Drawing.Color.White;
-            this.circularButton3.Location = new System.Drawing.Point(448, 92);
+            this.circularButton3.Location = new System.Drawing.Point(536, 93);
             this.circularButton3.Name = "circularButton3";
             this.circularButton3.Size = new System.Drawing.Size(85, 75);
             this.circularButton3.TabIndex = 5;
@@ -369,12 +369,13 @@
             this.circularButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.circularButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton2.ForeColor = System.Drawing.Color.White;
-            this.circularButton2.Location = new System.Drawing.Point(638, 92);
+            this.circularButton2.Location = new System.Drawing.Point(447, 139);
             this.circularButton2.Name = "circularButton2";
             this.circularButton2.Size = new System.Drawing.Size(83, 75);
             this.circularButton2.TabIndex = 7;
             this.circularButton2.Text = "DELETE";
             this.circularButton2.UseVisualStyleBackColor = false;
+            this.circularButton2.Visible = false;
             this.circularButton2.Click += new System.EventHandler(this.circularButton2_Click);
             // 
             // bunifuLabel5
@@ -673,7 +674,7 @@
             this.circularButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.circularButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularButton1.ForeColor = System.Drawing.Color.White;
-            this.circularButton1.Location = new System.Drawing.Point(545, 122);
+            this.circularButton1.Location = new System.Drawing.Point(638, 92);
             this.circularButton1.Name = "circularButton1";
             this.circularButton1.Size = new System.Drawing.Size(77, 75);
             this.circularButton1.TabIndex = 6;

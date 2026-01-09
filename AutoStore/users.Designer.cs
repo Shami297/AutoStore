@@ -276,6 +276,7 @@ namespace AutoStore
             this.EnteriesUser.Name = "EnteriesUser";
             this.EnteriesUser.Size = new System.Drawing.Size(217, 583);
             this.EnteriesUser.TabIndex = 22;
+            this.EnteriesUser.Paint += new System.Windows.Forms.PaintEventHandler(this.EnteriesUser_Paint);
             // 
             // nameText
             // 

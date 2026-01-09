@@ -23,7 +23,7 @@ namespace AutoStore
         public static void date(Label labl)
         {
 
-            labl.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
+            labl.Text = DateTime.Today.ToString("yyyy-MMM-dd");
         }
 
         public static void alphabetCheck(TextBox box)

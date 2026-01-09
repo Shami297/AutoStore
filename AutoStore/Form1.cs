@@ -27,6 +27,9 @@ namespace AutoStore
 
                 if (user != null)
                 {
+                    loginUser.ID = Convert.ToInt32(user.USR_ID);
+                    loginUser.Name = user.USR_NAME;
+                    loginUser.isAdmin = Convert.ToBoolean(user.ISADMIN);
                     DashBoard d = new DashBoard();
                     d.Show();
                     userbox.Text = "";

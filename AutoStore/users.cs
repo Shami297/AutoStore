@@ -206,6 +206,11 @@ namespace AutoStore
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
+            if (!loginUser.isAdmin)
+            {
+                MessageBox.Show("You are not Authorized, Please Login with Admin Account", "Error");
+                return;
+            }
             updateUser();
             textClear();
             updateBtn.Hide();
@@ -274,6 +279,11 @@ namespace AutoStore
             if (nameText.Text == string.Empty && bunifuTextBox3.Text == string.Empty)
                 return;
             Main1.alphabetCheck(nameText);
+        }
+
+        private void EnteriesUser_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

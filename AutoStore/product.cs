@@ -217,6 +217,12 @@ namespace AutoStore
 
         private void circularButton3_Click(object sender, EventArgs e)
         {
+            if (!loginUser.isAdmin)
+            {
+                MessageBox.Show("You are not Authorized, Please Login with Admin Account", "Error");
+                return;
+            }
+
             int selectedCatgoryID = Convert.ToInt32(category.SelectedValue);
 
             if(selectedCatgoryID > 0)
